@@ -26,7 +26,7 @@ ifeq ($(detected_OS),Windows)
 	EXT = .exe
 endif
 ifeq ($(detected_OS),Darwin)        # Mac OS X
-	LIBS := -I./include -lm -framework Foundation -framework AppKit -framework AVFoundation -framework OpenGL -framework CoreVideo -framework CoreMIDI -w $(STATIC)
+	LIBS := -I./include -framework AudioToolbox -lm -framework Foundation -framework AppKit -framework AVFoundation -framework OpenGL -framework CoreVideo -framework CoreMIDI -w $(STATIC)
 	EXT = 
 endif
 ifeq ($(detected_OS),Linux)
