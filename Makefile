@@ -22,7 +22,7 @@ else
 endif
 
 ifeq ($(detected_OS),Windows)
-	LIBS := -I./include -lXInput -ggdb -lWinmm -lshell32 -lgdi32 -lShcore -lm -ldwmapi $(STATIC) -I C:\VulkanSDK\1.3.275.0\Include -L C:\VulkanSDK\1.3.275.0\Lib -lvulkan1
+	LIBS := -I./include -lXInput -ggdb -lWinmm -lshell32 -lgdi32 -lShcore -lm -ldwmapi $(STATIC)
 	EXT = .exe
 endif
 ifeq ($(detected_OS),Darwin)        # Mac OS X
