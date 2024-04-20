@@ -1,6 +1,6 @@
 CC = gcc
 
-LIBS := -I./include -lshell32 -lXInput -lgdi32 -lm -ggdb -lShcore -lWinmm -lSDL2
+LIBS := -I./include -lshell32 -lXInput -lopengl32 -lgdi32 -lm -ggdb -lShcore -lWinmm
 EXT = .exe
 
 ifeq ($(CC),x86_64-w64-mingw32-gcc)
@@ -22,20 +22,20 @@ else
 endif
 
 ifeq ($(detected_OS),Windows)
-	LIBS := -I./include -lXInput -ggdb -lWinmm -lshell32 -lgdi32 -lShcore -lm -ldwmapi $(STATIC)
+	LIBS := -I./include -lshell32 -lXInput -lopengl32 -lgdi32 -lm -ggdb -lShcore -lWinmm
 	EXT = .exe
 endif
 ifeq ($(detected_OS),Darwin)        # Mac OS X
-	LIBS := -I./include -framework AudioToolbox -lm -framework Foundation -framework AppKit -framework AVFoundation -framework OpenGL -framework CoreVideo -framework CoreMIDI -w $(STATIC)
+	LIBS := -I./include -framework AudioToolbox -lm -framework Foundation -framework AppKit -framework OpenGL -framework CoreVideo -w $(STATIC)
 	EXT = 
 endif
 ifeq ($(detected_OS),Linux)
-    LIBS := -I./include -lXrandr -lX11 -lm $(STATIC)
+    LIBS := -I./include -lXrandr -lX11 -lGL -lm $(STATIC)
 	EXT = 
 endif
 
 all:
-	$(CC) rgfw_example.c  -O3 $(LIBS) -I./ -Wall -o rgfw_example$(EXT)
+	$(CC) rgfw_example.c -w -O3 $(LIBS) -I./ -Wall -o rgfw_example$(EXT)
 
 clean:
 	rm -f rgfw_example rgfw_example$(EXTT)
@@ -43,5 +43,5 @@ clean:
 debug:
 	make clean
 
-	$(CC) rgfw_example.c $(LIBS) -I./ -Wall -D RGFW_DEBUG -o rgfw_example
-	cd ../../ && ./examples/RGFW/rgfw_example$(EXT)
+	$(CC) rgfw_example.c -w $(LIBS) -I./ -Wall -D RGFW_DEBUG -o rgfw_example
+	./rgfw_example$(EXT)
