@@ -254,6 +254,24 @@ int main() {
     // Setup MIDI for songs
     if (midiOutGetNumDevs() != 0)
         midiOutOpen(&midi_out_handle, 0, 0, 0, 0);
+
+    #elif defined(__APPLE__)
+	AUGraph graph;
+	AUNode outputNode, mixerNode, dlsNode;
+	NewAUGraph(&graph);
+	AudioComponentDescription output = {'auou','ahal','appl',0,0};
+	AUGraphAddNode(graph, &output, &outputNode);
+	AUGraphOpen(graph);
+	AUGraphInitialize(graph);
+	AUGraphStart(graph);
+	AudioComponentDescription dls = {'aumu','dls ','appl',0,0};
+	AUGraphAddNode(graph, &dls, &dlsNode);
+	AUGraphNodeInfo(graph, dlsNode, NULL, &audio_unit);
+	AudioComponentDescription mixer = {'aumx','smxr','appl',0,0};
+	AUGraphAddNode(graph, &mixer, &mixerNode);
+	AUGraphConnectNodeInput(graph,mixerNode,0,outputNode,0);
+	AUGraphConnectNodeInput(graph,dlsNode,0,mixerNode,0);
+	AUGraphUpdate(graph,NULL);
     #endif
 
     // Initialize doom
