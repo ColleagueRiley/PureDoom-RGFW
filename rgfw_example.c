@@ -362,8 +362,7 @@ int main() {
         doom_update();
 
         resize.input_pixels = doom_get_framebuffer(4);
-        bitmap_rgbToBgr(resize.input_pixels, RGFW_AREA(WIDTH, HEIGHT)); 
- 
+        
         resize.output_w = resize.output_subw= window->r.w;
         resize.output_h = resize.output_subh = window->r.h; 
         stbir_resize_extended(&resize);
