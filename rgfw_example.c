@@ -18,13 +18,13 @@
 #define DOOM_IMPLEMENT_GETTIME 
 #define DOOM_IMPLEMENT_EXIT 
 #define DOOM_IMPLEMENT_GETENV 
-#define DOOM_IMPLEMENTATION 
-#define STB_IMAGE_RESIZE_IMPLEMENTATION 
+//#define DOOM_IMPLEMENTATION 
+//#define STB_IMAGE_RESIZE_IMPLEMENTATION 
 #include "PureDOOM.h"
 
 #include "stb_image_resize2.h"
 
-#define MINIAUDIO_IMPLEMENTATION
+//#define MINIAUDIO_IMPLEMENTATION
 #include "miniaudio.h"
 
 /* Resolution DOOM renders at */
@@ -223,7 +223,7 @@ int main() {
     config.periodSizeInFrames = 512;
 
     ma_device device, midi_device;
-    if (ma_device_init(NULL, &config, &device) != MA_SUCCESS) {
+    if (ma_device_init((void*)NULL, &config, &device) != MA_SUCCESS) {
         printf("Failed to init miniaudio device\n");
         return 1;
     }
@@ -232,7 +232,7 @@ int main() {
 
     // Capture mouse
     RGFW_window_showMouse(window, 0);
-    RGFW_window_mouseHold(window);
+    RGFW_window_mouseHold(window, RGFW_AREA(0, 0));
 
     //-----------------------------------------------------------------------
     // Setup DOOM
@@ -275,7 +275,7 @@ int main() {
     #endif
 
     // Initialize doom
-    doom_init(NULL, 0, DOOM_FLAG_MENU_DARKEN_BG);
+    doom_init(0, 0, DOOM_FLAG_MENU_DARKEN_BG);
 
     // Main loop
     g_isPaused = MA_FALSE;
@@ -294,11 +294,11 @@ int main() {
     resize.fast_alpha = 1;
     resize.horizontal_filter = STBIR_FILTER_BOX;
     resize.vertical_filter = STBIR_FILTER_BOX;
+	
+	u32 fps = 0;
 
     i32 j = 0;
     while (!done) {
-        RGFW_vector mouse = RGFW_VECTOR(0, 0);
-
         while (RGFW_window_checkEvent(window)) {
             switch (window->event.type) {
                 case RGFW_quit:
@@ -312,7 +312,7 @@ int main() {
                         if (active_mouse)
                             RGFW_window_mouseUnhold(window);
                         else
-                            RGFW_window_mouseHold(window);
+                            RGFW_window_mouseHold(window, RGFW_AREA(0, 0));
                         
                         active_mouse = !active_mouse;
                     }
@@ -342,22 +342,13 @@ int main() {
                 case RGFW_mousePosChanged:
                     if (active_mouse)
                     {
-                        i32 halfWidth = (window->r.w / 2.0);
-                        i32 newX = mouse.x + (window->event.point.x - halfWidth);
-
-                        if (newX < 250 && newX > -250)
-                           mouse.x = newX;
-                    }
+						doom_mouse_move(window->event.point.x * 2, 0);
+					}
                     break;
             }
             if (done) break;
         }
         if (done) break;
-
-        if (mouse.x || mouse.y) {
-            u32 mouseSpeed = window->event.fps / 10;
-            doom_mouse_move(mouse.x * (mouseSpeed), mouse.y * (mouseSpeed));
-        }
 
         doom_update();
 
@@ -368,6 +359,7 @@ int main() {
         stbir_resize_extended(&resize);
 
         RGFW_window_swapBuffers(window);
+		fps = RGFW_window_checkFPS(window, 0);
     }
     
 #if defined(WIN32)

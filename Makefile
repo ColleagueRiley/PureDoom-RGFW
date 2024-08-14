@@ -34,13 +34,18 @@ ifeq ($(detected_OS),Linux)
 	EXT = 
 endif
 
-all:
+LIBS += libs.o
+
+all: libs.o
 	$(CC) rgfw_example.c -w -O3 $(LIBS) -I./ -Wall -o rgfw_example$(EXT)
 
-clean:
-	rm -f rgfw_example rgfw_example$(EXTT)
+libs.o:
+	$(CC) libs.c -c -I./include
 
-debug:
+clean:
+	rm -f lib.o rgfw_example rgfw_example$(EXTT)
+
+debug: libs.o
 	make clean
 
 	$(CC) rgfw_example.c -w $(LIBS) -I./ -Wall -D RGFW_DEBUG -o rgfw_example
