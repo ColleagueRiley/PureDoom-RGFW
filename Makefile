@@ -43,7 +43,7 @@ libs.o:
 	$(CC) libs.c -c -I./include
 
 clean:
-	rm -f lib.o rgfw_example rgfw_example$(EXTT)
+	rm -f libs.o rgfw_example rgfw_example$(EXTT)
 
 debug: libs.o
 	make clean
