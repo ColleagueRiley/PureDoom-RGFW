@@ -84,16 +84,16 @@ doom_key_t RGFW_keycode_to_doom_key(u32 keycode) {
         case RGFW_y: return DOOM_KEY_Y;
         case RGFW_z: return DOOM_KEY_Z;
         case RGFW_BackSpace: return DOOM_KEY_BACKSPACE; 
-        case RGFW_ControlL:
-        case RGFW_ShiftL:
-        case RGFW_AltL:
+		case RGFW_AltL:
         case RGFW_AltR: return DOOM_KEY_ALT;
-        case RGFW_ControlR: return DOOM_KEY_CTRL;
+        case RGFW_ControlL: 
+		case RGFW_ControlR: return DOOM_KEY_CTRL;
         case RGFW_Left: return DOOM_KEY_LEFT_ARROW;
         case RGFW_Up: return DOOM_KEY_UP_ARROW;
         case RGFW_Right: return DOOM_KEY_RIGHT_ARROW;
         case RGFW_Down: return DOOM_KEY_DOWN_ARROW;        
-        case RGFW_ShiftR: return DOOM_KEY_SHIFT;
+        case RGFW_ShiftL:
+		case RGFW_ShiftR: return DOOM_KEY_SHIFT;
         case RGFW_F1: return DOOM_KEY_F1;
         case RGFW_F2: return DOOM_KEY_F2;
         case RGFW_F3: return DOOM_KEY_F3;
