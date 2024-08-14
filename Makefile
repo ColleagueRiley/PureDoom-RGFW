@@ -1,6 +1,6 @@
 CC = gcc
 
-LIBS := -I./include -lopengl32 -lgdi32 -lm -ggdb -lShcore -lWinmm
+LIBS := -I./include -lopengl32 -lgdi32 -lm -ggdb -lShcore -lwinmm
 EXT = .exe
 
 ifeq ($(CC),x86_64-w64-mingw32-gcc)
@@ -22,7 +22,7 @@ else
 endif
 
 ifeq ($(detected_OS),Windows)
-	LIBS := -I./include -lopengl32 -lgdi32 -lm -ggdb -lWinmm
+	LIBS := -I./include -lopengl32 -lgdi32 -lm -ggdb -lwinmm
 	EXT = .exe
 endif
 ifeq ($(detected_OS),Darwin)        # Mac OS X

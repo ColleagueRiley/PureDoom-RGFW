@@ -12,19 +12,19 @@
 #include <stdlib.h>
 #include <memory.h>
 
+#ifdef RGFW_WINDOWS
+#include "mmeapi.h"
+#endif
+
 #define DOOM_IMPLEMENT_PRINT 
 #define DOOM_IMPLEMENT_FILE_IO 
 #define DOOM_IMPLEMENT_MALLOC 
 #define DOOM_IMPLEMENT_GETTIME 
 #define DOOM_IMPLEMENT_EXIT 
 #define DOOM_IMPLEMENT_GETENV 
-//#define DOOM_IMPLEMENTATION 
-//#define STB_IMAGE_RESIZE_IMPLEMENTATION 
 #include "PureDOOM.h"
 
 #include "stb_image_resize2.h"
-
-//#define MINIAUDIO_IMPLEMENTATION
 #include "miniaudio.h"
 
 /* Resolution DOOM renders at */
