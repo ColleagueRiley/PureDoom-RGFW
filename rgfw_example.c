@@ -306,7 +306,11 @@ int main() {
                     break;
 
                 case RGFW_keyPressed:
-                    if (window->event.keyCode == RGFW_End || window->event.keyCode == RGFW_Escape || (window->event.keyCode == RGFW_Return && active_mouse == 0))
+                    /* 
+					 * I don't know a better way to do this without it causing
+					 * bugs or having to modify PureDOOM
+					*/
+					if (window->event.keyCode == RGFW_End || (window->event.keyCode == RGFW_ShiftL && RGFW_isPressed(window, RGFW_Escape)))
                     {
 						RGFW_window_showMouse(window, active_mouse);
                         if (active_mouse)
