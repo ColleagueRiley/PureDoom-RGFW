@@ -209,7 +209,7 @@ void* thread(void* args) {
 }
 
 int main() {
-    RGFW_window* window = RGFW_createWindow("RGFW DOOM", RGFW_RECT(0, 0, 500, 500), RGFW_CENTER);
+    RGFW_window* window = RGFW_createWindow("RGFW DOOM", RGFW_RECT(0, 0, 320, 200), RGFW_CENTER);
     
     RGFW_area screenSize = RGFW_getScreenSize();
     size_t buffer_stride = screenSize.w * 4;
@@ -306,22 +306,15 @@ int main() {
                     break;
 
                 case RGFW_keyPressed:
-                    if (window->event.keyCode == RGFW_End || window->event.keyCode == RGFW_Escape)
+                    if (window->event.keyCode == RGFW_End || window->event.keyCode == RGFW_Escape || (window->event.keyCode == RGFW_Return && active_mouse == 0))
                     {
-                        RGFW_window_showMouse(window, active_mouse);
+						RGFW_window_showMouse(window, active_mouse);
                         if (active_mouse)
                             RGFW_window_mouseUnhold(window);
                         else
                             RGFW_window_mouseHold(window, RGFW_AREA(0, 0));
                         
                         active_mouse = !active_mouse;
-                    }
-
-                    if (window->event.keyCode == RGFW_Return && active_mouse == 0) {
-                        RGFW_window_showMouse(window, active_mouse);
-                         
-                        
-                        active_mouse = 1;
                     }
 
                     doom_key_down(RGFW_keycode_to_doom_key(window->event.keyCode));
@@ -342,7 +335,7 @@ int main() {
                 case RGFW_mousePosChanged:
                     if (active_mouse)
                     {
-						doom_mouse_move(window->event.point.x * 2, 0);
+						doom_mouse_move(window->event.point.x * 10, 0);
 					}
                     break;
             }
@@ -364,7 +357,7 @@ int main() {
     
 #if defined(WIN32)
     if (midi_out_handle) midiOutClose(midi_out_handle);
-#endif*/
+#endif
 
     ma_device_uninit(&device);
     RGFW_window_close(window);

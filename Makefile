@@ -7,7 +7,7 @@ ifeq ($(CC),x86_64-w64-mingw32-gcc)
 	STATIC = --static
 endif
 
-ifneq (,$(filter $(CC),winegcc x86_64-w64-mingw32-gcc))
+ifneq (,$(filter $(CC),winegcc x86_64-w64-mingw32-gcc i686-w64-mingw32-gcc))
     detected_OS := Windows
 	LIB_EXT = .dll
 else
