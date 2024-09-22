@@ -200,9 +200,25 @@ void* thread(void* args) {
 }
 
 int main() {
-    RGFW_window* window = RGFW_createWindow("RGFW DOOM", RGFW_RECT(0, 0, 320, 200), RGFW_CENTER);
-    
-    RGFW_area screenSize = RGFW_getScreenSize();
+    RGFW_window* window = RGFW_createWindow("RGFW DOOM", RGFW_RECT(0, 0, 620, 400), RGFW_CENTER | RGFW_ALLOW_DND);
+	
+	char files[RGFW_MAX_DROPS][RGFW_MAX_PATH];
+	size_t count = 0; 
+	
+	while (count == 0) {
+		while (RGFW_window_checkEvent(window)) {
+			if (window->event.type == RGFW_dnd) {
+				count = window->event.droppedFilesCount;				
+				for (size_t i = 0; i < count; i++) {
+					strcpy(files[i], window->event.droppedFiles[i]);
+				}
+			}
+		}
+
+		RGFW_window_swapBuffers(window);
+	}
+
+	RGFW_area screenSize = RGFW_getScreenSize();
     size_t buffer_stride = screenSize.w * 4;
     size_t doom_stride = WIDTH * 4;
 
@@ -266,7 +282,7 @@ int main() {
     #endif
 
     // Initialize doom
-    doom_init(0, 0, DOOM_FLAG_MENU_DARKEN_BG);
+    doom_init(count, (char**)files, DOOM_FLAG_MENU_DARKEN_BG);
 
     // Main loop
     g_isPaused = MA_FALSE;
