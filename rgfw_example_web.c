@@ -209,7 +209,7 @@ int main() {
 		while (RGFW_window_checkEvent(window)) {
 			if (window->event.type == RGFW_dnd) {
 				count = window->event.droppedFilesCount;				
-				for (size_t i = 0; i < count; i++) {
+				for (size_t i = 0; i < count && i < 5; i++) {
 					strcpy(files[i], window->event.droppedFiles[i]);
 				}
 			}
