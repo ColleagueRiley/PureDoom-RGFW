@@ -24,7 +24,6 @@ jobs:
     - name: Compile to WebAssembly
       run: |
         make CC=emcc
-        mv html docs
 
     - name: Deploy Pages
       uses: peaceiris/actions-gh-pages@v4
