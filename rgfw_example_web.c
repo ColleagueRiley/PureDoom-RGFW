@@ -202,7 +202,7 @@ void* thread(void* args) {
 int main() {
     RGFW_window* window = RGFW_createWindow("RGFW DOOM", RGFW_RECT(0, 0, 620, 400), RGFW_CENTER | RGFW_ALLOW_DND);
 	
-	char files[RGFW_MAX_DROPS][RGFW_MAX_PATH];
+	char files[5][RGFW_MAX_PATH];
 	size_t count = 0; 
 	
 	while (count == 0 && !RGFW_isPressed(window, RGFW_Space)) {
