@@ -205,7 +205,7 @@ int main() {
 	char files[RGFW_MAX_DROPS][RGFW_MAX_PATH];
 	size_t count = 0; 
 	
-	while (count == 0) {
+	while (count == 0 || RGFW_isPressed(window, RGFW_Space)) {
 		while (RGFW_window_checkEvent(window)) {
 			if (window->event.type == RGFW_dnd) {
 				count = window->event.droppedFilesCount;				
