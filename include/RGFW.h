@@ -611,6 +611,13 @@ typedef struct RGFW_window {
 /** * @defgroup Window_management
 * @{ */ 
 
+
+/*! 
+ * the class name for X11 and WinAPI. apps with the same class will be grouped by the WM
+ * by default the class name will == the root window's name
+*/
+RGFWDEF void RGFW_setClassName(char* name);
+
 /*! this has to be set before createWindow is called, else the fulscreen size is used */
 RGFWDEF void RGFW_setBufferSize(RGFW_area size); /*!< the buffer cannot be resized (by RGFW) */
 
@@ -1637,6 +1644,11 @@ RGFW_window* RGFW_root = NULL;
 #define RGFW_HOLD_MOUSE			(1L<<2) /*!< hold the moues still */
 #define RGFW_MOUSE_LEFT 		(1L<<3) /* if mouse left the window */
 
+char* RGFW_className = NULL;
+void RGFW_setClassName(char* name) {
+	RGFW_className = name;
+}
+
 void RGFW_clipboardFree(char* str) { RGFW_FREE(str); }
 
 RGFW_keyState RGFW_mouseButtons[5] = { {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0} };
@@ -2322,7 +2334,7 @@ Start of Linux / Unix defines
 
 	u8 RGFW_mouseIconSrc[] = { XC_arrow, XC_left_ptr, XC_xterm, XC_crosshair, XC_hand2, XC_sb_h_double_arrow, XC_sb_v_double_arrow, XC_bottom_left_corner, XC_bottom_right_corner, XC_fleur, XC_X_cursor};  
 	/*atoms needed for drag and drop*/
-	Atom XdndAware, XdndTypeList, XdndSelection, XdndEnter, XdndPosition, XdndStatus, XdndLeave, XdndDrop, XdndFinished, XdndActionCopy, XdndActionMove, XdndActionLink, XdndActionAsk, XdndActionPrivate;
+	Atom XdndAware, XdndTypeList, XdndSelection, XdndEnter, XdndPosition, XdndStatus, XdndLeave, XdndDrop, XdndFinished, XdndActionCopy, XtextPlain, XtextUriList;
 
 	Atom wm_delete_window = 0;
 
@@ -2563,9 +2575,13 @@ Start of Linux / Unix defines
 		// In your .desktop app, if you set the property
 		// StartupWMClass=RGFW that will assoicate the launcher icon
 		// with your application - robrohan 
+		
+		if (RGFW_className == NULL)
+			RGFW_className = (char*)name;
+
 		XClassHint *hint = XAllocClassHint();
 		assert(hint != NULL);
-		hint->res_class = (char*)"RGFW";
+		hint->res_class = (char*)RGFW_className;
 		hint->res_name = (char*)name; // just use the window name as the app name
 		XSetClassHint((Display*) win->src.display, win->src.window, hint);
 		XFree(hint);
@@ -2646,7 +2662,6 @@ Start of Linux / Unix defines
 		if (args & RGFW_ALLOW_DND) { /* init drag and drop atoms and turn on drag and drop for this window */
 			win->_winArgs |= RGFW_ALLOW_DND;
 
-			XdndAware = XInternAtom((Display*) win->src.display, "XdndAware", False);
 			XdndTypeList = XInternAtom((Display*) win->src.display, "XdndTypeList", False);
 			XdndSelection = XInternAtom((Display*) win->src.display, "XdndSelection", False);
 
@@ -2660,15 +2675,16 @@ Start of Linux / Unix defines
 
 			/* actions */
 			XdndActionCopy = XInternAtom((Display*) win->src.display, "XdndActionCopy", False);
-			XdndActionMove = XInternAtom((Display*) win->src.display, "XdndActionMove", False);
-			XdndActionLink = XInternAtom((Display*) win->src.display, "XdndActionLink", False);
-			XdndActionAsk = XInternAtom((Display*) win->src.display, "XdndActionAsk", False);
-			XdndActionPrivate = XInternAtom((Display*) win->src.display, "XdndActionPrivate", False);
-			const Atom version = 5;
+
+			XtextUriList = XInternAtom((Display*) win->src.display, "text/uri-list", False); 
+			XtextPlain = XInternAtom((Display*) win->src.display, "text/plain", False);
+
+			XdndAware = XInternAtom((Display*) win->src.display, "XdndAware", False);
+			const u8 version = 5;
 
 			XChangeProperty((Display*) win->src.display, (Window) win->src.window,
 				XdndAware, 4, 32,
-				PropModeReplace, (u8*) &version, 1); /*!< turns on drag and drop */
+				PropModeReplace, &version, 1); /*!< turns on drag and drop */
 		}
 
 		#ifdef RGFW_EGL
@@ -2716,16 +2732,15 @@ Start of Linux / Unix defines
 		return RGFWMouse;
 	}
 
-	typedef struct XDND {
-		long source, version;
-		i32 format;
-	} XDND; /*!< data structure for xdnd events */
-	XDND xdnd;
-
 	int xAxis = 0, yAxis = 0;
 
 	RGFW_Event* RGFW_window_checkEvent(RGFW_window* win) {
 		assert(win != NULL);
+
+		static struct {
+			long source, version;
+			i32 format;
+		} xdnd;
 
 		if (win->event.type == 0) 
 			RGFW_resetKey();
@@ -2893,12 +2908,15 @@ Start of Linux / Unix defines
 
 			win->event.droppedFilesCount = 0;
 
-			/*
-				much of this event (drag and drop code) is source from glfw
-			*/
-
 			if ((win->_winArgs & RGFW_ALLOW_DND) == 0)
 				break;
+
+			XEvent reply = { ClientMessage };
+			reply.xclient.window = xdnd.source;
+			reply.xclient.format = 32;
+			reply.xclient.data.l[0] = (long) win->src.window;
+			reply.xclient.data.l[1] = 0;
+			reply.xclient.data.l[2] = None;
 
 			if (E.xclient.message_type == XdndEnter) {
 				unsigned long count;
@@ -2944,28 +2962,11 @@ Start of Linux / Unix defines
 					formats = real_formats;
 				}
 
-				u32 i;
-				for (i = 0; i < (u32)count; i++) {
-					char* name = XGetAtomName((Display*) win->src.display, formats[i]);
-
-					char* links[2] = { (char*) (const char*) "text/uri-list", (char*) (const char*) "text/plain" };
-					for (; 1; name++) {
-						u32 j;
-						for (j = 0; j < 2; j++) {
-							if (*links[j] != *name) {
-								links[j] = (char*) (const char*) "\1";
-								continue;
-							}
-
-							if (*links[j] == '\0' && *name == '\0')
-								xdnd.format = formats[i];
-
-							if (*links[j] != '\0' && *links[j] != '\1')
-								links[j]++;
-						}
-
-						if (*name == '\0')
-							break;
+				unsigned long i;
+				for (i = 0; i < count; i++) {
+				    if (formats[i] == XtextUriList || formats[i] == XtextPlain) {
+						xdnd.format = formats[i];
+						break;
 					}
 				}
 
@@ -2994,13 +2995,8 @@ Start of Linux / Unix defines
 				win->event.point.x = xpos;
 				win->event.point.y = ypos;
 
-				XEvent reply = { ClientMessage };
 				reply.xclient.window = xdnd.source;
 				reply.xclient.message_type = XdndStatus;
-				reply.xclient.format = 32;
-				reply.xclient.data.l[0] = (long) win->src.window;
-				reply.xclient.data.l[2] = 0;
-				reply.xclient.data.l[3] = 0;
 
 				if (xdnd.format) {
 					reply.xclient.data.l[1] = 1;
@@ -3035,12 +3031,6 @@ Start of Linux / Unix defines
 					time);
 			} else if (xdnd.version >= 2) {
 				XEvent reply = { ClientMessage };
-				reply.xclient.window = xdnd.source;
-				reply.xclient.message_type = XdndFinished;
-				reply.xclient.format = 32;
-				reply.xclient.data.l[0] = (long) win->src.window;
-				reply.xclient.data.l[1] = 0;
-				reply.xclient.data.l[2] = None;
 
 				XSendEvent((Display*) win->src.display, xdnd.source,
 					False, NoEventMask, &reply);
@@ -3125,11 +3115,7 @@ Start of Linux / Unix defines
 				XFree(data);
 
 			if (xdnd.version >= 2) {
-				XEvent reply = { ClientMessage };
-				reply.xclient.window = xdnd.source;
 				reply.xclient.message_type = XdndFinished;
-				reply.xclient.format = 32;
-				reply.xclient.data.l[0] = (long) win->src.window;
 				reply.xclient.data.l[1] = result;
 				reply.xclient.data.l[2] = XdndActionCopy;
 
@@ -3480,7 +3466,7 @@ Start of Linux / Unix defines
 			*size = sizeN;
 
 		return s;
-		}
+	}
 
 	/*
 		almost all of this function is sourced from GLFW
@@ -3520,9 +3506,6 @@ Start of Linux / Unix defines
 			XEvent reply = { SelectionNotify };
 			reply.xselection.property = 0;
 
-			const Atom formats[] = { UTF8_STRING, XA_STRING };
-			const i32 formatCount = sizeof(formats) / sizeof(formats[0]);
-		
 			if (request->target == TARGETS) {
 				const Atom targets[] = { TARGETS,
 										MULTIPLE,
@@ -3552,15 +3535,7 @@ Start of Linux / Unix defines
 
 				unsigned long i;
 				for (i = 0; i < (u32)count; i += 2) {
-					i32 j;
-
-					for (j = 0; j < formatCount; j++) {
-						if (targets[i] == formats[j])
-							break;
-					}
-
-					if (j < formatCount)
-					{
+					if (targets[i] == UTF8_STRING || targets[i] == XA_STRING) {
 						XChangeProperty((Display*) RGFW_root->src.display,
 							request->requestor,
 							targets[i + 1],
@@ -5007,6 +4982,10 @@ static const struct wl_callback_listener wl_surface_frame_listener = {
 	#include <shellapi.h>
 	#include <shellscalingapi.h>
 
+	#include <winuser.h>
+
+	__declspec(dllimport) int __stdcall WideCharToMultiByte( UINT CodePage, DWORD dwFlags, const WCHAR* lpWideCharStr, int cchWideChar,  LPSTR lpMultiByteStr, int cbMultiByte, LPCCH lpDefaultChar, LPBOOL lpUsedDefaultChar);
+	
 	#ifndef RGFW_NO_XINPUT
 	typedef DWORD (WINAPI * PFN_XInputGetState)(DWORD,XINPUT_STATE*);
 	PFN_XInputGetState XInputGetStateSRC = NULL;
@@ -5224,6 +5203,7 @@ RGFW_UNUSED(win); /*!< if buffer rendering is not being used */
 	}
 
 	void RGFW_releaseCursor(RGFW_window* win) {
+		RGFW_UNUSED(win);
 		ClipCursor(NULL);
     	const RAWINPUTDEVICE id = { 0x01, 0x02, RIDEV_REMOVE, NULL };
     	RegisterRawInputDevices(&id, 1, sizeof(id));	
@@ -5286,7 +5266,10 @@ RGFW_UNUSED(win); /*!< if buffer rendering is not being used */
 		WNDCLASSA Class = { };
 		#endif
 
-		Class.lpszClassName = name;
+		if (RGFW_className == NULL)
+			RGFW_className = (char*)name;
+
+		Class.lpszClassName = RGFW_className;
 		Class.hInstance = inh;
 		Class.hCursor = LoadCursor(NULL, IDC_ARROW);
 		Class.lpfnWndProc = WndProc;
@@ -5298,7 +5281,7 @@ RGFW_UNUSED(win); /*!< if buffer rendering is not being used */
 		RECT windowRect, clientRect;
 
 		if (!(args & RGFW_NO_BORDER)) {
-			window_style |= WS_CAPTION | WS_SYSMENU | WS_BORDER | WS_VISIBLE | WS_MINIMIZEBOX;
+			window_style |= WS_CAPTION | WS_SYSMENU | WS_BORDER | WS_MINIMIZEBOX;
 
 			if (!(args & RGFW_NO_RESIZE))
 				window_style |= WS_SIZEBOX | WS_MAXIMIZEBOX | WS_THICKFRAME;
@@ -7933,6 +7916,7 @@ RGFW_UNUSED(win); /*!< if buffer rendering is not being used */
 	}
 	
 	void RGFW_releaseCursor(RGFW_window* win) {
+		RGFW_UNUSED(win);
 		CGAssociateMouseAndMouseCursorPosition(1);	
 	}
 
@@ -8088,6 +8072,8 @@ RGFW_UNUSED(win); /*!< if buffer rendering is not being used */
 		#if defined(RGFW_OPENGL)
 		
 		NSOpenGLContext_setValues(win->src.ctx, &swapInterval, 222);
+		#else
+		RGFW_UNUSED(swapInterval);
 		#endif
 	}
 	#endif
@@ -8530,7 +8516,7 @@ RGFW_window* RGFW_createWindow(const char* name, RGFW_rect rect, u16 args) {
     emscripten_webgl_make_context_current(win->src.ctx);
 
 	#ifdef LEGACY_GL_EMULATION
-	EM_ASM("Module.useWebGL = true; GLImmediate.init();");
+	EM_ASM("Module.useWebGL = true; GLImmediate.init();");	
 	#endif
 
 	emscripten_set_canvas_element_size("#canvas", rect.w, rect.h);
@@ -8873,11 +8859,12 @@ u64 RGFW_getTime(void) {
 }
 
 void RGFW_releaseCursor(RGFW_window* win) {
+	RGFW_UNUSED(win);
 	emscripten_exit_pointerlock();
 }
 
 void RGFW_captureCursor(RGFW_window* win, RGFW_rect r) { 
-	RGFW_UNUSED(win)
+	RGFW_UNUSED(win); RGFW_UNUSED(r);
 
 	emscripten_request_pointerlock("#canvas", 1);
 }
