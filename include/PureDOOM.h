@@ -9769,7 +9769,7 @@ void FindResponseFile(void)
     int i;
 
     for (i = 1; i < myargc; i++)
-        if (myargv[i][0] == '@')
+            if (myargv[i][0] == '@')
         {
             void* handle = 0;
             int size;
