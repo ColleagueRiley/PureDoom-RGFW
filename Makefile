@@ -7,6 +7,8 @@ STATIC =
 WARNINGS = -Wall -Werror -Wextra
 OS_DIR = \\
 
+SRC = rgfw_example.c
+
 ifneq (,$(filter $(CC),winegcc x86_64-w64-mingw32-gcc i686-w64-mingw32-gcc))
 	STATIC = --static
     detected_OS := WindowsCross
@@ -75,12 +77,13 @@ ifneq (,$(filter $(CC),emcc))
 	CC=emcc
 
 	LIBS += --preload-file ./
+	SRC = rgfw_example_web.c
 endif
 
 LIBS += -I./include libs.o
 
-all: rgfw_example.c libs.o
-	$(CC) rgfw_example.c  $(LINK_GL1) $(LIBS) -o rgfw_example$(EXT)
+all: $(SRC) libs.o
+	$(CC) $(SRC)  $(LINK_GL1) $(LIBS) -o rgfw_example$(EXT)
 
 libs.o: libs.o
 	$(CC) libs.c -c -I./include 
@@ -88,8 +91,8 @@ libs.o: libs.o
 clean:
 	rm -f *.exe rgfw_example *.o 
 
-debug: rgfw_example.c libs.o
-	$(CC) rgfw_example.c $(LINK_GL1) $(LIBS) -D RGFW_DEBUG -o rgfw_example$(EXT) 
+debug: $(SRC) libs.o
+	$(CC) $(SRC) $(LINK_GL1) $(LIBS) -D RGFW_DEBUG -o rgfw_example$(EXT) 
 ifeq (,$(filter $(CC),emcc))
 	.$(OS_DIR)rgfw_example$(EXT)
 endif
