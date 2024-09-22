@@ -199,7 +199,7 @@ void* thread(void* args) {
     }
 }
 
-int main() {
+int main(int argc, char** args) {
     RGFW_window* window = RGFW_createWindow("RGFW DOOM", RGFW_RECT(0, 0, 320, 200), RGFW_CENTER);
     
     RGFW_area screenSize = RGFW_getScreenSize();
@@ -266,7 +266,7 @@ int main() {
     #endif
 
     // Initialize doom
-    doom_init(0, 0, DOOM_FLAG_MENU_DARKEN_BG);
+    doom_init(argc, args, DOOM_FLAG_MENU_DARKEN_BG);
 
     // Main loop
     g_isPaused = MA_FALSE;
