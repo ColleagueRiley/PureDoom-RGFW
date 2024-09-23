@@ -259,6 +259,7 @@ int main() {
     doom_set_default_int("key_strafeleft", DOOM_KEY_A);
     doom_set_default_int("key_straferight", DOOM_KEY_D);
     doom_set_default_int("key_use", DOOM_KEY_E);
+    doom_set_default_int("key_fire", DOOM_KEY_SPACE);
     
     doom_set_default_int("mouse_move", 0); // Mouse will not move forward
    
