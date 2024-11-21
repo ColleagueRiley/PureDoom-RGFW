@@ -132,15 +132,15 @@ Module['FS_createPath']("/.git/logs/refs", "remotes", true, true);
 Module['FS_createPath']("/.git/logs/refs/remotes", "origin", true, true);
 Module['FS_createPath']("/.git", "objects", true, true);
 Module['FS_createPath']("/.git/objects", "1a", true, true);
-Module['FS_createPath']("/.git/objects", "1b", true, true);
 Module['FS_createPath']("/.git/objects", "29", true, true);
+Module['FS_createPath']("/.git/objects", "34", true, true);
 Module['FS_createPath']("/.git/objects", "4e", true, true);
 Module['FS_createPath']("/.git/objects", "53", true, true);
 Module['FS_createPath']("/.git/objects", "60", true, true);
 Module['FS_createPath']("/.git/objects", "63", true, true);
 Module['FS_createPath']("/.git/objects", "65", true, true);
 Module['FS_createPath']("/.git/objects", "69", true, true);
-Module['FS_createPath']("/.git/objects", "89", true, true);
+Module['FS_createPath']("/.git/objects", "86", true, true);
 Module['FS_createPath']("/.git/objects", "94", true, true);
 Module['FS_createPath']("/.git/objects", "a5", true, true);
 Module['FS_createPath']("/.git/objects", "ad", true, true);
@@ -151,6 +151,7 @@ Module['FS_createPath']("/.git/objects", "f2", true, true);
 Module['FS_createPath']("/.git/objects", "f5", true, true);
 Module['FS_createPath']("/.git/objects", "f6", true, true);
 Module['FS_createPath']("/.git/objects", "fd", true, true);
+Module['FS_createPath']("/.git/objects", "fe", true, true);
 Module['FS_createPath']("/.git", "refs", true, true);
 Module['FS_createPath']("/.git/refs", "heads", true, true);
 Module['FS_createPath']("/.git/refs", "remotes", true, true);
@@ -225,7 +226,7 @@ Module['FS_createPath']("/", "include", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/.git/FETCH_HEAD", "start": 0, "end": 136}, {"filename": "/.git/HEAD", "start": 136, "end": 157}, {"filename": "/.git/config", "start": 157, "end": 582}, {"filename": "/.git/description", "start": 582, "end": 655}, {"filename": "/.git/hooks/applypatch-msg.sample", "start": 655, "end": 1133}, {"filename": "/.git/hooks/commit-msg.sample", "start": 1133, "end": 2029}, {"filename": "/.git/hooks/fsmonitor-watchman.sample", "start": 2029, "end": 6755}, {"filename": "/.git/hooks/post-update.sample", "start": 6755, "end": 6944}, {"filename": "/.git/hooks/pre-applypatch.sample", "start": 6944, "end": 7368}, {"filename": "/.git/hooks/pre-commit.sample", "start": 7368, "end": 9017}, {"filename": "/.git/hooks/pre-merge-commit.sample", "start": 9017, "end": 9433}, {"filename": "/.git/hooks/pre-push.sample", "start": 9433, "end": 10807}, {"filename": "/.git/hooks/pre-rebase.sample", "start": 10807, "end": 15705}, {"filename": "/.git/hooks/pre-receive.sample", "start": 15705, "end": 16249}, {"filename": "/.git/hooks/prepare-commit-msg.sample", "start": 16249, "end": 17741}, {"filename": "/.git/hooks/push-to-checkout.sample", "start": 17741, "end": 20524}, {"filename": "/.git/hooks/sendemail-validate.sample", "start": 20524, "end": 22832}, {"filename": "/.git/hooks/update.sample", "start": 22832, "end": 26482}, {"filename": "/.git/index", "start": 26482, "end": 27982}, {"filename": "/.git/info/exclude", "start": 27982, "end": 28222}, {"filename": "/.git/logs/HEAD", "start": 28222, "end": 28440}, {"filename": "/.git/logs/refs/heads/main", "start": 28440, "end": 28667}, {"filename": "/.git/logs/refs/remotes/origin/main", "start": 28667, "end": 29004}, {"filename": "/.git/objects/1a/58f66277d6bc869dfeb701591bd39f25eaacd0", "start": 29004, "end": 1934202}, {"filename": "/.git/objects/1b/be8e16d3a89824ce6012b9ae62b22443bedbde", "start": 1934202, "end": 1935035}, {"filename": "/.git/objects/29/0723c02c8fef7994b50814d29173bd0e1b6d65", "start": 1935035, "end": 1935994}, {"filename": "/.git/objects/4e/f4547aefa30c7f48c2be88c4f1a51382fce816", "start": 1935994, "end": 2291295}, {"filename": "/.git/objects/53/d6bbaf9307c2ed1f5922382e55fd267d6eeae8", "start": 2291295, "end": 2291630}, {"filename": "/.git/objects/60/3df2c5e18d0e5d50da24b23a829907d78560e3", "start": 2291630, "end": 2291681}, {"filename": "/.git/objects/60/e69e8267ec2f9b98dafa36e3c384ee6b482cc2", "start": 2291681, "end": 2295286}, {"filename": "/.git/objects/63/c10df545acea0f1105c00d6878bc5c2e3fc8a9", "start": 2295286, "end": 2299174}, {"filename": "/.git/objects/65/2024e13b3742986f8fdfc047202ff62d4cfbf0", "start": 2299174, "end": 2299318}, {"filename": "/.git/objects/69/f39c7158f6ad82d3c34f801c8a4b8877987b8d", "start": 2299318, "end": 2299479}, {"filename": "/.git/objects/89/6adc884a990e681af4769d44613d091e2ccd4d", "start": 2299479, "end": 2299826}, {"filename": "/.git/objects/94/2a688e0262975daf8af6dda5fc81f57c78fb97", "start": 2299826, "end": 3096864}, {"filename": "/.git/objects/a5/fbb79337d2cf393675e1e1984eb6ca7e6df55b", "start": 3096864, "end": 3097075}, {"filename": "/.git/objects/ad/d5b587422b9939a3ee4dde2d3de4287fdb0b00", "start": 3097075, "end": 3097226}, {"filename": "/.git/objects/cc/fd80180c6e7678402d00a60d1e80d0b4a44d73", "start": 3097226, "end": 3097406}, {"filename": "/.git/objects/d8/edf9e5250979dda18ed4fb7d11169df14ad1cd", "start": 3097406, "end": 3097510}, {"filename": "/.git/objects/dd/1dd20b7e137fd4cc374bc2ea50c695499995ad", "start": 3097510, "end": 3098501}, {"filename": "/.git/objects/f2/e558dc49564f6970abf208a7c174e2707f4f01", "start": 3098501, "end": 3098650}, {"filename": "/.git/objects/f5/0333a44314b4e1bb99a0273fab045e7a91d60c", "start": 3098650, "end": 3195669}, {"filename": "/.git/objects/f6/2f2c2b23fcae40613a03c63ef0d7540d602d3a", "start": 3195669, "end": 3280782}, {"filename": "/.git/objects/fd/ddb29aa445bf3d6a5d843d6dd77e10a9f99657", "start": 3280782, "end": 3281503}, {"filename": "/.git/refs/heads/main", "start": 3281503, "end": 3281544}, {"filename": "/.git/refs/remotes/origin/main", "start": 3281544, "end": 3281585}, {"filename": "/.git/shallow", "start": 3281585, "end": 3281626}, {"filename": "/.github/workflows/linux.yml", "start": 3281626, "end": 3282007}, {"filename": "/.github/workflows/macos.yml", "start": 3282007, "end": 3282218}, {"filename": "/.github/workflows/web.yml", "start": 3282218, "end": 3282781}, {"filename": "/.github/workflows/windows.yml", "start": 3282781, "end": 3282996}, {"filename": "/LICENSE", "start": 3282996, "end": 3284207}, {"filename": "/Makefile", "start": 3284207, "end": 3286446}, {"filename": "/README.md", "start": 3286446, "end": 3286555}, {"filename": "/doom1.wad", "start": 3286555, "end": 7482575}, {"filename": "/include/PureDOOM.h", "start": 7482575, "end": 8751804}, {"filename": "/include/RGFW.h", "start": 8751804, "end": 9042370}, {"filename": "/include/miniaudio.h", "start": 9042370, "end": 12896384}, {"filename": "/include/stb_image_resize2.h", "start": 12896384, "end": 13338483}, {"filename": "/index.html", "start": 13338483, "end": 13340401}, {"filename": "/libs.c", "start": 13340401, "end": 13340769}, {"filename": "/libs.o", "start": 13340769, "end": 16903750}, {"filename": "/rgfw_example.c", "start": 16903750, "end": 16915381}, {"filename": "/rgfw_example_web.c", "start": 16915381, "end": 16927720}], "remote_package_size": 16927720});
+    loadPackage({"files": [{"filename": "/.git/FETCH_HEAD", "start": 0, "end": 136}, {"filename": "/.git/HEAD", "start": 136, "end": 157}, {"filename": "/.git/config", "start": 157, "end": 582}, {"filename": "/.git/description", "start": 582, "end": 655}, {"filename": "/.git/hooks/applypatch-msg.sample", "start": 655, "end": 1133}, {"filename": "/.git/hooks/commit-msg.sample", "start": 1133, "end": 2029}, {"filename": "/.git/hooks/fsmonitor-watchman.sample", "start": 2029, "end": 6755}, {"filename": "/.git/hooks/post-update.sample", "start": 6755, "end": 6944}, {"filename": "/.git/hooks/pre-applypatch.sample", "start": 6944, "end": 7368}, {"filename": "/.git/hooks/pre-commit.sample", "start": 7368, "end": 9017}, {"filename": "/.git/hooks/pre-merge-commit.sample", "start": 9017, "end": 9433}, {"filename": "/.git/hooks/pre-push.sample", "start": 9433, "end": 10807}, {"filename": "/.git/hooks/pre-rebase.sample", "start": 10807, "end": 15705}, {"filename": "/.git/hooks/pre-receive.sample", "start": 15705, "end": 16249}, {"filename": "/.git/hooks/prepare-commit-msg.sample", "start": 16249, "end": 17741}, {"filename": "/.git/hooks/push-to-checkout.sample", "start": 17741, "end": 20524}, {"filename": "/.git/hooks/sendemail-validate.sample", "start": 20524, "end": 22832}, {"filename": "/.git/hooks/update.sample", "start": 22832, "end": 26482}, {"filename": "/.git/index", "start": 26482, "end": 28054}, {"filename": "/.git/info/exclude", "start": 28054, "end": 28294}, {"filename": "/.git/logs/HEAD", "start": 28294, "end": 28513}, {"filename": "/.git/logs/refs/heads/main", "start": 28513, "end": 28741}, {"filename": "/.git/logs/refs/remotes/origin/main", "start": 28741, "end": 29079}, {"filename": "/.git/objects/1a/58f66277d6bc869dfeb701591bd39f25eaacd0", "start": 29079, "end": 1934277}, {"filename": "/.git/objects/29/0723c02c8fef7994b50814d29173bd0e1b6d65", "start": 1934277, "end": 1935236}, {"filename": "/.git/objects/34/a4b45d1ad15d69a13177da6e1fdb7de4af67cd", "start": 1935236, "end": 1936066}, {"filename": "/.git/objects/4e/f4547aefa30c7f48c2be88c4f1a51382fce816", "start": 1936066, "end": 2291367}, {"filename": "/.git/objects/53/d6bbaf9307c2ed1f5922382e55fd267d6eeae8", "start": 2291367, "end": 2291702}, {"filename": "/.git/objects/60/3df2c5e18d0e5d50da24b23a829907d78560e3", "start": 2291702, "end": 2291753}, {"filename": "/.git/objects/60/e69e8267ec2f9b98dafa36e3c384ee6b482cc2", "start": 2291753, "end": 2295358}, {"filename": "/.git/objects/63/c10df545acea0f1105c00d6878bc5c2e3fc8a9", "start": 2295358, "end": 2299246}, {"filename": "/.git/objects/65/2024e13b3742986f8fdfc047202ff62d4cfbf0", "start": 2299246, "end": 2299390}, {"filename": "/.git/objects/69/f39c7158f6ad82d3c34f801c8a4b8877987b8d", "start": 2299390, "end": 2299551}, {"filename": "/.git/objects/86/866634444ba4027fb1240b77368c7925122835", "start": 2299551, "end": 2385737}, {"filename": "/.git/objects/94/2a688e0262975daf8af6dda5fc81f57c78fb97", "start": 2385737, "end": 3182775}, {"filename": "/.git/objects/a5/fbb79337d2cf393675e1e1984eb6ca7e6df55b", "start": 3182775, "end": 3182986}, {"filename": "/.git/objects/ad/d5b587422b9939a3ee4dde2d3de4287fdb0b00", "start": 3182986, "end": 3183137}, {"filename": "/.git/objects/cc/fd80180c6e7678402d00a60d1e80d0b4a44d73", "start": 3183137, "end": 3183317}, {"filename": "/.git/objects/d8/edf9e5250979dda18ed4fb7d11169df14ad1cd", "start": 3183317, "end": 3183421}, {"filename": "/.git/objects/dd/1dd20b7e137fd4cc374bc2ea50c695499995ad", "start": 3183421, "end": 3184412}, {"filename": "/.git/objects/f2/e558dc49564f6970abf208a7c174e2707f4f01", "start": 3184412, "end": 3184561}, {"filename": "/.git/objects/f5/0333a44314b4e1bb99a0273fab045e7a91d60c", "start": 3184561, "end": 3281580}, {"filename": "/.git/objects/f6/2f2c2b23fcae40613a03c63ef0d7540d602d3a", "start": 3281580, "end": 3366693}, {"filename": "/.git/objects/fd/ddb29aa445bf3d6a5d843d6dd77e10a9f99657", "start": 3366693, "end": 3367414}, {"filename": "/.git/objects/fe/b49d06459d8114c18938d630a4ab9985afc9f9", "start": 3367414, "end": 3367789}, {"filename": "/.git/refs/heads/main", "start": 3367789, "end": 3367830}, {"filename": "/.git/refs/remotes/origin/main", "start": 3367830, "end": 3367871}, {"filename": "/.git/shallow", "start": 3367871, "end": 3367912}, {"filename": "/.github/workflows/linux.yml", "start": 3367912, "end": 3368293}, {"filename": "/.github/workflows/macos.yml", "start": 3368293, "end": 3368504}, {"filename": "/.github/workflows/web.yml", "start": 3368504, "end": 3369067}, {"filename": "/.github/workflows/windows.yml", "start": 3369067, "end": 3369282}, {"filename": "/LICENSE", "start": 3369282, "end": 3370493}, {"filename": "/Makefile", "start": 3370493, "end": 3372732}, {"filename": "/README.md", "start": 3372732, "end": 3372841}, {"filename": "/RGFW.h", "start": 3372841, "end": 3666989}, {"filename": "/doom1.wad", "start": 3666989, "end": 7863009}, {"filename": "/include/PureDOOM.h", "start": 7863009, "end": 9132238}, {"filename": "/include/RGFW.h", "start": 9132238, "end": 9422804}, {"filename": "/include/miniaudio.h", "start": 9422804, "end": 13276818}, {"filename": "/include/stb_image_resize2.h", "start": 13276818, "end": 13718917}, {"filename": "/index.html", "start": 13718917, "end": 13720835}, {"filename": "/libs.c", "start": 13720835, "end": 13721203}, {"filename": "/libs.o", "start": 13721203, "end": 17284184}, {"filename": "/rgfw_example.c", "start": 17284184, "end": 17295815}, {"filename": "/rgfw_example_web.c", "start": 17295815, "end": 17308154}], "remote_package_size": 17308154});
 
   })();
 
@@ -1214,10 +1215,10 @@ function dbg(text) {
 // === Body ===
 
 var ASM_CONSTS = {
-  226080: () => { Module.useWebGL = true; GLImmediate.init(); },  
- 226126: () => { var canvas = document.getElementById('canvas'); canvas.addEventListener('drop', function(e) { e.preventDefault(); if (e.dataTransfer.file < 0) return; var filenamesArray = []; var count = e.dataTransfer.files.length; var drop_dir = '.rgfw_dropped_files'; Module._RGFW_mkdir(drop_dir); for (var i = 0; i < count; i++) { var file = e.dataTransfer.files[i]; var path = '/' + drop_dir + '/' + file.name.replace("//", '_'); var reader = new FileReader(); reader.onloadend = (e) => { if (reader.readyState != 2) { out('failed to read dropped file: '+file.name+': '+reader.error); } else { var data = e.target.result; _RGFW_writeFile(path, new Uint8Array(data), file.size); } }; reader.readAsArrayBuffer(file); var filename = stringToNewUTF8(path); filenamesArray.push(filename); Module._RGFW_makeSetValue(i, filename); } Module._Emscripten_onDrop(count); for (var i = 0; i < count; ++i) { _free(filenamesArray[i]); } }, true); canvas.addEventListener('dragover', function(e) { e.preventDefault(); return false; }, true); },  
- 227145: () => { return window.innerWidth; },  
- 227175: () => { return window.innerHeight; },  
+  226080: () => { return window.innerWidth; },  
+ 226110: () => { return window.innerHeight; },  
+ 226141: () => { Module.useWebGL = true; GLImmediate.init(); },  
+ 226187: () => { var canvas = document.getElementById('canvas'); canvas.addEventListener('drop', function(e) { e.preventDefault(); if (e.dataTransfer.file < 0) return; var filenamesArray = []; var count = e.dataTransfer.files.length; var drop_dir = '.rgfw_dropped_files'; Module._RGFW_mkdir(drop_dir); for (var i = 0; i < count; i++) { var file = e.dataTransfer.files[i]; var path = '/' + drop_dir + '/' + file.name.replace("//", '_'); var reader = new FileReader(); reader.onloadend = (e) => { if (reader.readyState != 2) { out('failed to read dropped file: '+file.name+': '+reader.error); } else { var data = e.target.result; _RGFW_writeFile(path, new Uint8Array(data), file.size); } }; reader.readAsArrayBuffer(file); var filename = stringToNewUTF8(path); filenamesArray.push(filename); Module._RGFW_makeSetValue(i, filename); } Module._Emscripten_onDrop(count); for (var i = 0; i < count; ++i) { _free(filenamesArray[i]); } }, true); canvas.addEventListener('dragover', function(e) { e.preventDefault(); return false; }, true); },  
  227206: () => { document.getElementById('canvas').style.cursor = 'none'; },  
  227263: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
  227334: () => { if ((window.AudioContext || window.webkitAudioContext) === undefined) { return 0; } if (typeof(window.miniaudio) === 'undefined') { window.miniaudio = {}; miniaudio.devices = []; miniaudio.track_device = function(device) { for (var iDevice = 0; iDevice < miniaudio.devices.length; ++iDevice) { if (miniaudio.devices[iDevice] == null) { miniaudio.devices[iDevice] = device; return iDevice; } } miniaudio.devices.push(device); return miniaudio.devices.length - 1; }; miniaudio.untrack_device_by_index = function(deviceIndex) { miniaudio.devices[deviceIndex] = null; while (miniaudio.devices.length > 0) { if (miniaudio.devices[miniaudio.devices.length-1] == null) { miniaudio.devices.pop(); } else { break; } } }; miniaudio.untrack_device = function(device) { for (var iDevice = 0; iDevice < miniaudio.devices.length; ++iDevice) { if (miniaudio.devices[iDevice] == device) { return miniaudio.untrack_device_by_index(iDevice); } } }; miniaudio.get_device_by_index = function(deviceIndex) { return miniaudio.devices[deviceIndex]; }; miniaudio.unlock_event_types = (function(){ return ['touchstart', 'touchend', 'click']; })(); miniaudio.unlock = function() { for(var i = 0; i < miniaudio.devices.length; ++i) { var device = miniaudio.devices[i]; if (device != null && device.webaudio != null && device.state === 2 ) { device.webaudio.resume(); } } miniaudio.unlock_event_types.map(function(event_type) { document.removeEventListener(event_type, miniaudio.unlock, true); }); }; miniaudio.unlock_event_types.map(function(event_type) { document.addEventListener(event_type, miniaudio.unlock, true); }); } return 1; },  
@@ -4666,6 +4667,18 @@ var ASM_CONSTS = {
       abortOnCannotGrowMemory(requestedSize);
     };
 
+  /** @suppress {checkTypes} */
+  var _emscripten_sample_gamepad_data = () => {
+      try {
+        if (navigator.getGamepads) return (JSEvents.lastGamepadState = navigator.getGamepads())
+          ? 0 : -1;
+      } catch(e) {
+        err(`navigator.getGamepads() exists, but failed to execute with exception ${e}. Disabling Gamepad access.`);
+        navigator.getGamepads = null; // Disable getGamepads() so that it won't be attempted to be used again.
+      }
+      return -1;
+    };
+
   
   var findCanvasEventTarget = findEventTarget;
   var _emscripten_set_canvas_element_size = (target, width, height) => {
@@ -4793,17 +4806,6 @@ var ASM_CONSTS = {
       return JSEvents.registerOrRemoveHandler(eventHandler);
     };
   
-  /** @suppress {checkTypes} */
-  var _emscripten_sample_gamepad_data = () => {
-      try {
-        if (navigator.getGamepads) return (JSEvents.lastGamepadState = navigator.getGamepads())
-          ? 0 : -1;
-      } catch(e) {
-        err(`navigator.getGamepads() exists, but failed to execute with exception ${e}. Disabling Gamepad access.`);
-        navigator.getGamepads = null; // Disable getGamepads() so that it won't be attempted to be used again.
-      }
-      return -1;
-    };
   var _emscripten_set_gamepadconnected_callback_on_thread = (userData, useCapture, callbackfunc, targetThread) => {
       if (_emscripten_sample_gamepad_data()) return -1;
       return registerGamepadEventCallback(2, userData, useCapture, callbackfunc, 26, "gamepadconnected", targetThread);
@@ -12203,6 +12205,8 @@ var wasmImports = {
   /** @export */
   emscripten_resize_heap: _emscripten_resize_heap,
   /** @export */
+  emscripten_sample_gamepad_data: _emscripten_sample_gamepad_data,
+  /** @export */
   emscripten_set_canvas_element_size: _emscripten_set_canvas_element_size,
   /** @export */
   emscripten_set_focusin_callback_on_thread: _emscripten_set_focusin_callback_on_thread,
@@ -12312,9 +12316,9 @@ var stackSave = createExportWrapper('stackSave');
 var stackRestore = createExportWrapper('stackRestore');
 var stackAlloc = createExportWrapper('stackAlloc');
 var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports['emscripten_stack_get_current'])();
-var dynCall_iiii = Module['dynCall_iiii'] = createExportWrapper('dynCall_iiii');
 var dynCall_viiii = Module['dynCall_viiii'] = createExportWrapper('dynCall_viiii');
 var dynCall_ii = Module['dynCall_ii'] = createExportWrapper('dynCall_ii');
+var dynCall_iiii = Module['dynCall_iiii'] = createExportWrapper('dynCall_iiii');
 var dynCall_vii = Module['dynCall_vii'] = createExportWrapper('dynCall_vii');
 var dynCall_viii = Module['dynCall_viii'] = createExportWrapper('dynCall_viii');
 var dynCall_viiiii = Module['dynCall_viiiii'] = createExportWrapper('dynCall_viiiii');
