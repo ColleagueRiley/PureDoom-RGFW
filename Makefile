@@ -77,7 +77,6 @@ ifneq (,$(filter $(CC),emcc))
 	CC=emcc
 
 	LIBS += --preload-file ./
-	SRC = rgfw_example_web.c
 endif
 
 LIBS += -I./include libs.o
