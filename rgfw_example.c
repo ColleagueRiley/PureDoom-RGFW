@@ -200,8 +200,12 @@ void* thread(void* args) {
 }
 
 int main(int argc, char** args) {
+#ifdef __EMSCRIPTEN__
+    RGFW_window* window = RGFW_createWindow("RGFW DOOM", RGFW_RECT(0, 0, 620, 400), RGFW_CENTER | RGFW_ALLOW_DND);  
+#else
     RGFW_window* window = RGFW_createWindow("RGFW DOOM", RGFW_RECT(0, 0, 320, 200), RGFW_CENTER);
-    
+#endif
+
     RGFW_area screenSize = RGFW_getScreenSize();
     size_t buffer_stride = screenSize.w * 4;
     size_t doom_stride = WIDTH * 4;
