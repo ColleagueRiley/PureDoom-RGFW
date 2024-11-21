@@ -239,7 +239,9 @@ int main(int argc, char** args) {
     doom_set_default_int("key_strafeleft", DOOM_KEY_A);
     doom_set_default_int("key_straferight", DOOM_KEY_D);
     doom_set_default_int("key_use", DOOM_KEY_E);
-    
+#ifdef __EMSCRIPTEN__
+    doom_set_default_int("key_fire", DOOM_KEY_SPACE);
+#endif
     doom_set_default_int("mouse_move", 0); // Mouse will not move forward
    
     // Setup resolution
