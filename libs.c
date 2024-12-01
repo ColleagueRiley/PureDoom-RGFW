@@ -1,3 +1,6 @@
+#define MINIAUDIO_IMPLEMENTATION
+#include "miniaudio.h"
+
 #define DOOM_IMPLEMENT_PRINT 
 #define DOOM_IMPLEMENT_FILE_IO 
 #define DOOM_IMPLEMENT_MALLOC 
@@ -9,8 +12,5 @@
 #include "PureDOOM.h"
 
 #include "stb_image_resize2.h"
-
-#define MINIAUDIO_IMPLEMENTATION
-#include "miniaudio.h"
 
 
