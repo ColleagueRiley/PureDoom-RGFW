@@ -281,7 +281,7 @@ int main(int argc, char** args) {
 
     int active_mouse = 1; // Dev allow us to take mouse out of window
 
-    RGFW_createThread(thread, NULL);
+    RGFW_createThread((void*)thread, NULL);
 
     STBIR_RESIZE resize;
 
