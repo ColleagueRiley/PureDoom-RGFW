@@ -133,18 +133,18 @@ Module['FS_createPath']("/.git/logs/refs/remotes", "origin", true, true);
 Module['FS_createPath']("/.git", "objects", true, true);
 Module['FS_createPath']("/.git/objects", "07", true, true);
 Module['FS_createPath']("/.git/objects", "1a", true, true);
+Module['FS_createPath']("/.git/objects", "39", true, true);
 Module['FS_createPath']("/.git/objects", "3b", true, true);
 Module['FS_createPath']("/.git/objects", "4e", true, true);
 Module['FS_createPath']("/.git/objects", "53", true, true);
-Module['FS_createPath']("/.git/objects", "5a", true, true);
 Module['FS_createPath']("/.git/objects", "60", true, true);
 Module['FS_createPath']("/.git/objects", "65", true, true);
-Module['FS_createPath']("/.git/objects", "6e", true, true);
-Module['FS_createPath']("/.git/objects", "86", true, true);
 Module['FS_createPath']("/.git/objects", "94", true, true);
 Module['FS_createPath']("/.git/objects", "a5", true, true);
 Module['FS_createPath']("/.git/objects", "ad", true, true);
-Module['FS_createPath']("/.git/objects", "bd", true, true);
+Module['FS_createPath']("/.git/objects", "b0", true, true);
+Module['FS_createPath']("/.git/objects", "bc", true, true);
+Module['FS_createPath']("/.git/objects", "c9", true, true);
 Module['FS_createPath']("/.git/objects", "d8", true, true);
 Module['FS_createPath']("/.git/objects", "e2", true, true);
 Module['FS_createPath']("/.git/objects", "f2", true, true);
@@ -225,7 +225,7 @@ Module['FS_createPath']("/", "include", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/.git/FETCH_HEAD", "start": 0, "end": 136}, {"filename": "/.git/HEAD", "start": 136, "end": 157}, {"filename": "/.git/config", "start": 157, "end": 582}, {"filename": "/.git/description", "start": 582, "end": 655}, {"filename": "/.git/hooks/applypatch-msg.sample", "start": 655, "end": 1133}, {"filename": "/.git/hooks/commit-msg.sample", "start": 1133, "end": 2029}, {"filename": "/.git/hooks/fsmonitor-watchman.sample", "start": 2029, "end": 6755}, {"filename": "/.git/hooks/post-update.sample", "start": 6755, "end": 6944}, {"filename": "/.git/hooks/pre-applypatch.sample", "start": 6944, "end": 7368}, {"filename": "/.git/hooks/pre-commit.sample", "start": 7368, "end": 9017}, {"filename": "/.git/hooks/pre-merge-commit.sample", "start": 9017, "end": 9433}, {"filename": "/.git/hooks/pre-push.sample", "start": 9433, "end": 10807}, {"filename": "/.git/hooks/pre-rebase.sample", "start": 10807, "end": 15705}, {"filename": "/.git/hooks/pre-receive.sample", "start": 15705, "end": 16249}, {"filename": "/.git/hooks/prepare-commit-msg.sample", "start": 16249, "end": 17741}, {"filename": "/.git/hooks/push-to-checkout.sample", "start": 17741, "end": 20524}, {"filename": "/.git/hooks/sendemail-validate.sample", "start": 20524, "end": 22832}, {"filename": "/.git/hooks/update.sample", "start": 22832, "end": 26482}, {"filename": "/.git/index", "start": 26482, "end": 27894}, {"filename": "/.git/info/exclude", "start": 27894, "end": 28134}, {"filename": "/.git/logs/HEAD", "start": 28134, "end": 28351}, {"filename": "/.git/logs/refs/heads/main", "start": 28351, "end": 28577}, {"filename": "/.git/logs/refs/remotes/origin/main", "start": 28577, "end": 28913}, {"filename": "/.git/objects/07/df4d9a97a1f34d1baf44a8914a932155e2886d", "start": 28913, "end": 29897}, {"filename": "/.git/objects/1a/58f66277d6bc869dfeb701591bd39f25eaacd0", "start": 29897, "end": 1935095}, {"filename": "/.git/objects/3b/13203076bfc39203e0d8606cb7b1f15925f25e", "start": 1935095, "end": 1938785}, {"filename": "/.git/objects/4e/f4547aefa30c7f48c2be88c4f1a51382fce816", "start": 1938785, "end": 2294086}, {"filename": "/.git/objects/53/d6bbaf9307c2ed1f5922382e55fd267d6eeae8", "start": 2294086, "end": 2294421}, {"filename": "/.git/objects/5a/9afb986cc1c033bd6abfaa6438c3199878f4f8", "start": 2294421, "end": 2294582}, {"filename": "/.git/objects/60/3df2c5e18d0e5d50da24b23a829907d78560e3", "start": 2294582, "end": 2294633}, {"filename": "/.git/objects/65/2024e13b3742986f8fdfc047202ff62d4cfbf0", "start": 2294633, "end": 2294777}, {"filename": "/.git/objects/6e/087a2bf9477d6fc9d6b429e27a791ca63fde1e", "start": 2294777, "end": 2295096}, {"filename": "/.git/objects/86/866634444ba4027fb1240b77368c7925122835", "start": 2295096, "end": 2381282}, {"filename": "/.git/objects/94/2a688e0262975daf8af6dda5fc81f57c78fb97", "start": 2381282, "end": 3178320}, {"filename": "/.git/objects/a5/fbb79337d2cf393675e1e1984eb6ca7e6df55b", "start": 3178320, "end": 3178531}, {"filename": "/.git/objects/ad/d5b587422b9939a3ee4dde2d3de4287fdb0b00", "start": 3178531, "end": 3178682}, {"filename": "/.git/objects/bd/fcba8d335ca3f219c8e5ca2398b1d7071eb13f", "start": 3178682, "end": 3178858}, {"filename": "/.git/objects/d8/edf9e5250979dda18ed4fb7d11169df14ad1cd", "start": 3178858, "end": 3178962}, {"filename": "/.git/objects/e2/74c08d04d669636eba27aa2eb4d4b6bf93e1bd", "start": 3178962, "end": 3179143}, {"filename": "/.git/objects/f2/e558dc49564f6970abf208a7c174e2707f4f01", "start": 3179143, "end": 3179292}, {"filename": "/.git/objects/f5/0333a44314b4e1bb99a0273fab045e7a91d60c", "start": 3179292, "end": 3276311}, {"filename": "/.git/objects/fb/62f53800cdf591d20fb814ef1a03d0c5504fb4", "start": 3276311, "end": 3277224}, {"filename": "/.git/objects/fd/ddb29aa445bf3d6a5d843d6dd77e10a9f99657", "start": 3277224, "end": 3277945}, {"filename": "/.git/refs/heads/main", "start": 3277945, "end": 3277986}, {"filename": "/.git/refs/remotes/origin/main", "start": 3277986, "end": 3278027}, {"filename": "/.git/shallow", "start": 3278027, "end": 3278068}, {"filename": "/.github/workflows/linux.yml", "start": 3278068, "end": 3278449}, {"filename": "/.github/workflows/macos.yml", "start": 3278449, "end": 3278660}, {"filename": "/.github/workflows/web.yml", "start": 3278660, "end": 3279223}, {"filename": "/.github/workflows/windows.yml", "start": 3279223, "end": 3279438}, {"filename": "/LICENSE", "start": 3279438, "end": 3280649}, {"filename": "/Makefile", "start": 3280649, "end": 3282862}, {"filename": "/README.md", "start": 3282862, "end": 3282971}, {"filename": "/doom1.wad", "start": 3282971, "end": 7478991}, {"filename": "/include/PureDOOM.h", "start": 7478991, "end": 8748220}, {"filename": "/include/RGFW.h", "start": 8748220, "end": 9042368}, {"filename": "/include/miniaudio.h", "start": 9042368, "end": 12896382}, {"filename": "/include/stb_image_resize2.h", "start": 12896382, "end": 13338481}, {"filename": "/index.html", "start": 13338481, "end": 13340325}, {"filename": "/libs.c", "start": 13340325, "end": 13340693}, {"filename": "/libs.o", "start": 13340693, "end": 16901749}, {"filename": "/rgfw_example.c", "start": 16901749, "end": 16913619}], "remote_package_size": 16913619});
+    loadPackage({"files": [{"filename": "/.git/FETCH_HEAD", "start": 0, "end": 136}, {"filename": "/.git/HEAD", "start": 136, "end": 157}, {"filename": "/.git/config", "start": 157, "end": 582}, {"filename": "/.git/description", "start": 582, "end": 655}, {"filename": "/.git/hooks/applypatch-msg.sample", "start": 655, "end": 1133}, {"filename": "/.git/hooks/commit-msg.sample", "start": 1133, "end": 2029}, {"filename": "/.git/hooks/fsmonitor-watchman.sample", "start": 2029, "end": 6755}, {"filename": "/.git/hooks/post-update.sample", "start": 6755, "end": 6944}, {"filename": "/.git/hooks/pre-applypatch.sample", "start": 6944, "end": 7368}, {"filename": "/.git/hooks/pre-commit.sample", "start": 7368, "end": 9017}, {"filename": "/.git/hooks/pre-merge-commit.sample", "start": 9017, "end": 9433}, {"filename": "/.git/hooks/pre-push.sample", "start": 9433, "end": 10807}, {"filename": "/.git/hooks/pre-rebase.sample", "start": 10807, "end": 15705}, {"filename": "/.git/hooks/pre-receive.sample", "start": 15705, "end": 16249}, {"filename": "/.git/hooks/prepare-commit-msg.sample", "start": 16249, "end": 17741}, {"filename": "/.git/hooks/push-to-checkout.sample", "start": 17741, "end": 20524}, {"filename": "/.git/hooks/sendemail-validate.sample", "start": 20524, "end": 22832}, {"filename": "/.git/hooks/update.sample", "start": 22832, "end": 26482}, {"filename": "/.git/index", "start": 26482, "end": 27894}, {"filename": "/.git/info/exclude", "start": 27894, "end": 28134}, {"filename": "/.git/logs/HEAD", "start": 28134, "end": 28351}, {"filename": "/.git/logs/refs/heads/main", "start": 28351, "end": 28577}, {"filename": "/.git/logs/refs/remotes/origin/main", "start": 28577, "end": 28913}, {"filename": "/.git/objects/07/df4d9a97a1f34d1baf44a8914a932155e2886d", "start": 28913, "end": 29897}, {"filename": "/.git/objects/1a/58f66277d6bc869dfeb701591bd39f25eaacd0", "start": 29897, "end": 1935095}, {"filename": "/.git/objects/39/9a3a8b734a9a589528fa2006c47dbe75f6df7f", "start": 1935095, "end": 1935259}, {"filename": "/.git/objects/3b/13203076bfc39203e0d8606cb7b1f15925f25e", "start": 1935259, "end": 1938949}, {"filename": "/.git/objects/4e/f4547aefa30c7f48c2be88c4f1a51382fce816", "start": 1938949, "end": 2294250}, {"filename": "/.git/objects/53/d6bbaf9307c2ed1f5922382e55fd267d6eeae8", "start": 2294250, "end": 2294585}, {"filename": "/.git/objects/60/3df2c5e18d0e5d50da24b23a829907d78560e3", "start": 2294585, "end": 2294636}, {"filename": "/.git/objects/65/2024e13b3742986f8fdfc047202ff62d4cfbf0", "start": 2294636, "end": 2294780}, {"filename": "/.git/objects/94/2a688e0262975daf8af6dda5fc81f57c78fb97", "start": 2294780, "end": 3091818}, {"filename": "/.git/objects/a5/fbb79337d2cf393675e1e1984eb6ca7e6df55b", "start": 3091818, "end": 3092029}, {"filename": "/.git/objects/ad/d5b587422b9939a3ee4dde2d3de4287fdb0b00", "start": 3092029, "end": 3092180}, {"filename": "/.git/objects/b0/608883e2ee2310e48fabe823a7984805c4e83d", "start": 3092180, "end": 3178966}, {"filename": "/.git/objects/bc/b3a0cdaf7f06b468137e0c8de28aaae6b7d48e", "start": 3178966, "end": 3179285}, {"filename": "/.git/objects/c9/f68c153e47492a185cbfaf5209db907fab42a2", "start": 3179285, "end": 3179447}, {"filename": "/.git/objects/d8/edf9e5250979dda18ed4fb7d11169df14ad1cd", "start": 3179447, "end": 3179551}, {"filename": "/.git/objects/e2/74c08d04d669636eba27aa2eb4d4b6bf93e1bd", "start": 3179551, "end": 3179732}, {"filename": "/.git/objects/f2/e558dc49564f6970abf208a7c174e2707f4f01", "start": 3179732, "end": 3179881}, {"filename": "/.git/objects/f5/0333a44314b4e1bb99a0273fab045e7a91d60c", "start": 3179881, "end": 3276900}, {"filename": "/.git/objects/fb/62f53800cdf591d20fb814ef1a03d0c5504fb4", "start": 3276900, "end": 3277813}, {"filename": "/.git/objects/fd/ddb29aa445bf3d6a5d843d6dd77e10a9f99657", "start": 3277813, "end": 3278534}, {"filename": "/.git/refs/heads/main", "start": 3278534, "end": 3278575}, {"filename": "/.git/refs/remotes/origin/main", "start": 3278575, "end": 3278616}, {"filename": "/.git/shallow", "start": 3278616, "end": 3278657}, {"filename": "/.github/workflows/linux.yml", "start": 3278657, "end": 3279038}, {"filename": "/.github/workflows/macos.yml", "start": 3279038, "end": 3279249}, {"filename": "/.github/workflows/web.yml", "start": 3279249, "end": 3279812}, {"filename": "/.github/workflows/windows.yml", "start": 3279812, "end": 3280027}, {"filename": "/LICENSE", "start": 3280027, "end": 3281238}, {"filename": "/Makefile", "start": 3281238, "end": 3283451}, {"filename": "/README.md", "start": 3283451, "end": 3283560}, {"filename": "/doom1.wad", "start": 3283560, "end": 7479580}, {"filename": "/include/PureDOOM.h", "start": 7479580, "end": 8748809}, {"filename": "/include/RGFW.h", "start": 8748809, "end": 9045277}, {"filename": "/include/miniaudio.h", "start": 9045277, "end": 12899291}, {"filename": "/include/stb_image_resize2.h", "start": 12899291, "end": 13341390}, {"filename": "/index.html", "start": 13341390, "end": 13343234}, {"filename": "/libs.c", "start": 13343234, "end": 13343602}, {"filename": "/libs.o", "start": 13343602, "end": 16904658}, {"filename": "/rgfw_example.c", "start": 16904658, "end": 16916528}], "remote_package_size": 16916528});
 
   })();
 
@@ -1214,22 +1214,23 @@ function dbg(text) {
 // === Body ===
 
 var ASM_CONSTS = {
-  226080: () => { return window.innerWidth; },  
- 226110: () => { return window.innerHeight; },  
- 226141: () => { Module.useWebGL = true; GLImmediate.init(); },  
- 226187: () => { var canvas = document.getElementById('canvas'); canvas.addEventListener('drop', function(e) { e.preventDefault(); if (e.dataTransfer.file < 0) return; var filenamesArray = []; var count = e.dataTransfer.files.length; var drop_dir = '.rgfw_dropped_files'; Module._RGFW_mkdir(drop_dir); for (var i = 0; i < count; i++) { var file = e.dataTransfer.files[i]; var path = '/' + drop_dir + '/' + file.name.replace("//", '_'); var reader = new FileReader(); reader.onloadend = (e) => { if (reader.readyState != 2) { out('failed to read dropped file: '+file.name+': '+reader.error); } else { var data = e.target.result; _RGFW_writeFile(path, new Uint8Array(data), file.size); } }; reader.readAsArrayBuffer(file); var filename = stringToNewUTF8(path); filenamesArray.push(filename); Module._RGFW_makeSetValue(i, filename); } Module._Emscripten_onDrop(count); for (var i = 0; i < count; ++i) { _free(filenamesArray[i]); } }, true); canvas.addEventListener('dragover', function(e) { e.preventDefault(); return false; }, true); },  
- 227206: () => { document.getElementById('canvas').style.cursor = 'none'; },  
- 227263: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
- 227334: () => { if ((window.AudioContext || window.webkitAudioContext) === undefined) { return 0; } if (typeof(window.miniaudio) === 'undefined') { window.miniaudio = {}; miniaudio.devices = []; miniaudio.track_device = function(device) { for (var iDevice = 0; iDevice < miniaudio.devices.length; ++iDevice) { if (miniaudio.devices[iDevice] == null) { miniaudio.devices[iDevice] = device; return iDevice; } } miniaudio.devices.push(device); return miniaudio.devices.length - 1; }; miniaudio.untrack_device_by_index = function(deviceIndex) { miniaudio.devices[deviceIndex] = null; while (miniaudio.devices.length > 0) { if (miniaudio.devices[miniaudio.devices.length-1] == null) { miniaudio.devices.pop(); } else { break; } } }; miniaudio.untrack_device = function(device) { for (var iDevice = 0; iDevice < miniaudio.devices.length; ++iDevice) { if (miniaudio.devices[iDevice] == device) { return miniaudio.untrack_device_by_index(iDevice); } } }; miniaudio.get_device_by_index = function(deviceIndex) { return miniaudio.devices[deviceIndex]; }; miniaudio.unlock_event_types = (function(){ return ['touchstart', 'touchend', 'click']; })(); miniaudio.unlock = function() { for(var i = 0; i < miniaudio.devices.length; ++i) { var device = miniaudio.devices[i]; if (device != null && device.webaudio != null && device.state === 2 ) { device.webaudio.resume(); } } miniaudio.unlock_event_types.map(function(event_type) { document.removeEventListener(event_type, miniaudio.unlock, true); }); }; miniaudio.unlock_event_types.map(function(event_type) { document.addEventListener(event_type, miniaudio.unlock, true); }); } return 1; },  
- 228946: () => { return (navigator.mediaDevices !== undefined && navigator.mediaDevices.getUserMedia !== undefined); },  
- 229050: () => { try { var temp = new (window.AudioContext || window.webkitAudioContext)(); var sampleRate = temp.sampleRate; temp.close(); return sampleRate; } catch(e) { return 0; } },  
- 229221: ($0, $1, $2, $3, $4) => { var channels = $0; var sampleRate = $1; var bufferSize = $2; var isCapture = $3; var pDevice = $4; if (typeof(window.miniaudio) === 'undefined') { return -1; } var device = {}; device.webaudio = new (window.AudioContext || window.webkitAudioContext)({sampleRate:sampleRate}); device.webaudio.suspend(); device.state = 1; device.intermediaryBufferSizeInBytes = channels * bufferSize * 4; device.intermediaryBuffer = Module._malloc(device.intermediaryBufferSizeInBytes); device.intermediaryBufferView = new Float32Array(Module.HEAPF32.buffer, device.intermediaryBuffer, device.intermediaryBufferSizeInBytes); device.scriptNode = device.webaudio.createScriptProcessor(bufferSize, (isCapture) ? channels : 0, (isCapture) ? 0 : channels); if (isCapture) { device.scriptNode.onaudioprocess = function(e) { if (device.intermediaryBuffer === undefined) { return; } if (device.intermediaryBufferView.length == 0) { device.intermediaryBufferView = new Float32Array(Module.HEAPF32.buffer, device.intermediaryBuffer, device.intermediaryBufferSizeInBytes); } for (var iChannel = 0; iChannel < e.outputBuffer.numberOfChannels; ++iChannel) { e.outputBuffer.getChannelData(iChannel).fill(0.0); } var sendSilence = false; if (device.streamNode === undefined) { sendSilence = true; } if (e.inputBuffer.numberOfChannels != channels) { console.log("Capture: Channel count mismatch. " + e.inputBufer.numberOfChannels + " != " + channels + ". Sending silence."); sendSilence = true; } var totalFramesProcessed = 0; while (totalFramesProcessed < e.inputBuffer.length) { var framesRemaining = e.inputBuffer.length - totalFramesProcessed; var framesToProcess = framesRemaining; if (framesToProcess > (device.intermediaryBufferSizeInBytes/channels/4)) { framesToProcess = (device.intermediaryBufferSizeInBytes/channels/4); } if (sendSilence) { device.intermediaryBufferView.fill(0.0); } else { for (var iFrame = 0; iFrame < framesToProcess; ++iFrame) { for (var iChannel = 0; iChannel < e.inputBuffer.numberOfChannels; ++iChannel) { device.intermediaryBufferView[iFrame*channels + iChannel] = e.inputBuffer.getChannelData(iChannel)[totalFramesProcessed + iFrame]; } } } ccall("ma_device_process_pcm_frames_capture__webaudio", "undefined", ["number", "number", "number"], [pDevice, framesToProcess, device.intermediaryBuffer]); totalFramesProcessed += framesToProcess; } }; navigator.mediaDevices.getUserMedia({audio:true, video:false}) .then(function(stream) { device.streamNode = device.webaudio.createMediaStreamSource(stream); device.streamNode.connect(device.scriptNode); device.scriptNode.connect(device.webaudio.destination); }) .catch(function(error) { device.scriptNode.connect(device.webaudio.destination); }); } else { device.scriptNode.onaudioprocess = function(e) { if (device.intermediaryBuffer === undefined) { return; } if(device.intermediaryBufferView.length == 0) { device.intermediaryBufferView = new Float32Array(Module.HEAPF32.buffer, device.intermediaryBuffer, device.intermediaryBufferSizeInBytes); } var outputSilence = false; if (e.outputBuffer.numberOfChannels != channels) { console.log("Playback: Channel count mismatch. " + e.outputBufer.numberOfChannels + " != " + channels + ". Outputting silence."); outputSilence = true; return; } var totalFramesProcessed = 0; while (totalFramesProcessed < e.outputBuffer.length) { var framesRemaining = e.outputBuffer.length - totalFramesProcessed; var framesToProcess = framesRemaining; if (framesToProcess > (device.intermediaryBufferSizeInBytes/channels/4)) { framesToProcess = (device.intermediaryBufferSizeInBytes/channels/4); } ccall("ma_device_process_pcm_frames_playback__webaudio", "undefined", ["number", "number", "number"], [pDevice, framesToProcess, device.intermediaryBuffer]); if (outputSilence) { for (var iChannel = 0; iChannel < e.outputBuffer.numberOfChannels; ++iChannel) { e.outputBuffer.getChannelData(iChannel).fill(0.0); } } else { for (var iChannel = 0; iChannel < e.outputBuffer.numberOfChannels; ++iChannel) { var outputBuffer = e.outputBuffer.getChannelData(iChannel); var intermediaryBuffer = device.intermediaryBufferView; for (var iFrame = 0; iFrame < framesToProcess; ++iFrame) { outputBuffer[totalFramesProcessed + iFrame] = intermediaryBuffer[iFrame*channels + iChannel]; } } } totalFramesProcessed += framesToProcess; } }; device.scriptNode.connect(device.webaudio.destination); } return miniaudio.track_device(device); },  
- 233621: ($0) => { return miniaudio.get_device_by_index($0).webaudio.sampleRate; },  
- 233687: ($0) => { var device = miniaudio.get_device_by_index($0); if (device.scriptNode !== undefined) { device.scriptNode.onaudioprocess = function(e) {}; device.scriptNode.disconnect(); device.scriptNode = undefined; } if (device.streamNode !== undefined) { device.streamNode.disconnect(); device.streamNode = undefined; } device.webaudio.close(); device.webaudio = undefined; if (device.intermediaryBuffer !== undefined) { Module._free(device.intermediaryBuffer); device.intermediaryBuffer = undefined; device.intermediaryBufferView = undefined; device.intermediaryBufferSizeInBytes = undefined; } miniaudio.untrack_device_by_index($0); },  
- 234313: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.resume(); device.state = 2; },  
- 234409: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.resume(); device.state = 2; },  
- 234505: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.suspend(); device.state = 1; },  
- 234602: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.suspend(); device.state = 1; }
+  226080: () => { Module.canvas.focus(); },  
+ 226105: () => { return window.innerWidth; },  
+ 226135: () => { return window.innerHeight; },  
+ 226166: () => { Module.useWebGL = true; GLImmediate.init(); },  
+ 226212: () => { var canvas = document.getElementById('canvas'); canvas.addEventListener('drop', function(e) { e.preventDefault(); if (e.dataTransfer.file < 0) return; var filenamesArray = []; var count = e.dataTransfer.files.length; var drop_dir = '.rgfw_dropped_files'; Module._RGFW_mkdir(drop_dir); for (var i = 0; i < count; i++) { var file = e.dataTransfer.files[i]; var path = '/' + drop_dir + '/' + file.name.replace("//", '_'); var reader = new FileReader(); reader.onloadend = (e) => { if (reader.readyState != 2) { out('failed to read dropped file: '+file.name+': '+reader.error); } else { var data = e.target.result; _RGFW_writeFile(path, new Uint8Array(data), file.size); } }; reader.readAsArrayBuffer(file); var filename = stringToNewUTF8(path); filenamesArray.push(filename); Module._RGFW_makeSetValue(i, filename); } Module._Emscripten_onDrop(count); for (var i = 0; i < count; ++i) { _free(filenamesArray[i]); } }, true); canvas.addEventListener('dragover', function(e) { e.preventDefault(); return false; }, true); },  
+ 227231: () => { document.getElementById('canvas').style.cursor = 'none'; },  
+ 227288: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
+ 227359: () => { if ((window.AudioContext || window.webkitAudioContext) === undefined) { return 0; } if (typeof(window.miniaudio) === 'undefined') { window.miniaudio = {}; miniaudio.devices = []; miniaudio.track_device = function(device) { for (var iDevice = 0; iDevice < miniaudio.devices.length; ++iDevice) { if (miniaudio.devices[iDevice] == null) { miniaudio.devices[iDevice] = device; return iDevice; } } miniaudio.devices.push(device); return miniaudio.devices.length - 1; }; miniaudio.untrack_device_by_index = function(deviceIndex) { miniaudio.devices[deviceIndex] = null; while (miniaudio.devices.length > 0) { if (miniaudio.devices[miniaudio.devices.length-1] == null) { miniaudio.devices.pop(); } else { break; } } }; miniaudio.untrack_device = function(device) { for (var iDevice = 0; iDevice < miniaudio.devices.length; ++iDevice) { if (miniaudio.devices[iDevice] == device) { return miniaudio.untrack_device_by_index(iDevice); } } }; miniaudio.get_device_by_index = function(deviceIndex) { return miniaudio.devices[deviceIndex]; }; miniaudio.unlock_event_types = (function(){ return ['touchstart', 'touchend', 'click']; })(); miniaudio.unlock = function() { for(var i = 0; i < miniaudio.devices.length; ++i) { var device = miniaudio.devices[i]; if (device != null && device.webaudio != null && device.state === 2 ) { device.webaudio.resume(); } } miniaudio.unlock_event_types.map(function(event_type) { document.removeEventListener(event_type, miniaudio.unlock, true); }); }; miniaudio.unlock_event_types.map(function(event_type) { document.addEventListener(event_type, miniaudio.unlock, true); }); } return 1; },  
+ 228971: () => { return (navigator.mediaDevices !== undefined && navigator.mediaDevices.getUserMedia !== undefined); },  
+ 229075: () => { try { var temp = new (window.AudioContext || window.webkitAudioContext)(); var sampleRate = temp.sampleRate; temp.close(); return sampleRate; } catch(e) { return 0; } },  
+ 229246: ($0, $1, $2, $3, $4) => { var channels = $0; var sampleRate = $1; var bufferSize = $2; var isCapture = $3; var pDevice = $4; if (typeof(window.miniaudio) === 'undefined') { return -1; } var device = {}; device.webaudio = new (window.AudioContext || window.webkitAudioContext)({sampleRate:sampleRate}); device.webaudio.suspend(); device.state = 1; device.intermediaryBufferSizeInBytes = channels * bufferSize * 4; device.intermediaryBuffer = Module._malloc(device.intermediaryBufferSizeInBytes); device.intermediaryBufferView = new Float32Array(Module.HEAPF32.buffer, device.intermediaryBuffer, device.intermediaryBufferSizeInBytes); device.scriptNode = device.webaudio.createScriptProcessor(bufferSize, (isCapture) ? channels : 0, (isCapture) ? 0 : channels); if (isCapture) { device.scriptNode.onaudioprocess = function(e) { if (device.intermediaryBuffer === undefined) { return; } if (device.intermediaryBufferView.length == 0) { device.intermediaryBufferView = new Float32Array(Module.HEAPF32.buffer, device.intermediaryBuffer, device.intermediaryBufferSizeInBytes); } for (var iChannel = 0; iChannel < e.outputBuffer.numberOfChannels; ++iChannel) { e.outputBuffer.getChannelData(iChannel).fill(0.0); } var sendSilence = false; if (device.streamNode === undefined) { sendSilence = true; } if (e.inputBuffer.numberOfChannels != channels) { console.log("Capture: Channel count mismatch. " + e.inputBufer.numberOfChannels + " != " + channels + ". Sending silence."); sendSilence = true; } var totalFramesProcessed = 0; while (totalFramesProcessed < e.inputBuffer.length) { var framesRemaining = e.inputBuffer.length - totalFramesProcessed; var framesToProcess = framesRemaining; if (framesToProcess > (device.intermediaryBufferSizeInBytes/channels/4)) { framesToProcess = (device.intermediaryBufferSizeInBytes/channels/4); } if (sendSilence) { device.intermediaryBufferView.fill(0.0); } else { for (var iFrame = 0; iFrame < framesToProcess; ++iFrame) { for (var iChannel = 0; iChannel < e.inputBuffer.numberOfChannels; ++iChannel) { device.intermediaryBufferView[iFrame*channels + iChannel] = e.inputBuffer.getChannelData(iChannel)[totalFramesProcessed + iFrame]; } } } ccall("ma_device_process_pcm_frames_capture__webaudio", "undefined", ["number", "number", "number"], [pDevice, framesToProcess, device.intermediaryBuffer]); totalFramesProcessed += framesToProcess; } }; navigator.mediaDevices.getUserMedia({audio:true, video:false}) .then(function(stream) { device.streamNode = device.webaudio.createMediaStreamSource(stream); device.streamNode.connect(device.scriptNode); device.scriptNode.connect(device.webaudio.destination); }) .catch(function(error) { device.scriptNode.connect(device.webaudio.destination); }); } else { device.scriptNode.onaudioprocess = function(e) { if (device.intermediaryBuffer === undefined) { return; } if(device.intermediaryBufferView.length == 0) { device.intermediaryBufferView = new Float32Array(Module.HEAPF32.buffer, device.intermediaryBuffer, device.intermediaryBufferSizeInBytes); } var outputSilence = false; if (e.outputBuffer.numberOfChannels != channels) { console.log("Playback: Channel count mismatch. " + e.outputBufer.numberOfChannels + " != " + channels + ". Outputting silence."); outputSilence = true; return; } var totalFramesProcessed = 0; while (totalFramesProcessed < e.outputBuffer.length) { var framesRemaining = e.outputBuffer.length - totalFramesProcessed; var framesToProcess = framesRemaining; if (framesToProcess > (device.intermediaryBufferSizeInBytes/channels/4)) { framesToProcess = (device.intermediaryBufferSizeInBytes/channels/4); } ccall("ma_device_process_pcm_frames_playback__webaudio", "undefined", ["number", "number", "number"], [pDevice, framesToProcess, device.intermediaryBuffer]); if (outputSilence) { for (var iChannel = 0; iChannel < e.outputBuffer.numberOfChannels; ++iChannel) { e.outputBuffer.getChannelData(iChannel).fill(0.0); } } else { for (var iChannel = 0; iChannel < e.outputBuffer.numberOfChannels; ++iChannel) { var outputBuffer = e.outputBuffer.getChannelData(iChannel); var intermediaryBuffer = device.intermediaryBufferView; for (var iFrame = 0; iFrame < framesToProcess; ++iFrame) { outputBuffer[totalFramesProcessed + iFrame] = intermediaryBuffer[iFrame*channels + iChannel]; } } } totalFramesProcessed += framesToProcess; } }; device.scriptNode.connect(device.webaudio.destination); } return miniaudio.track_device(device); },  
+ 233646: ($0) => { return miniaudio.get_device_by_index($0).webaudio.sampleRate; },  
+ 233712: ($0) => { var device = miniaudio.get_device_by_index($0); if (device.scriptNode !== undefined) { device.scriptNode.onaudioprocess = function(e) {}; device.scriptNode.disconnect(); device.scriptNode = undefined; } if (device.streamNode !== undefined) { device.streamNode.disconnect(); device.streamNode = undefined; } device.webaudio.close(); device.webaudio = undefined; if (device.intermediaryBuffer !== undefined) { Module._free(device.intermediaryBuffer); device.intermediaryBuffer = undefined; device.intermediaryBufferView = undefined; device.intermediaryBufferSizeInBytes = undefined; } miniaudio.untrack_device_by_index($0); },  
+ 234338: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.resume(); device.state = 2; },  
+ 234434: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.resume(); device.state = 2; },  
+ 234530: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.suspend(); device.state = 1; },  
+ 234627: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.suspend(); device.state = 1; }
 };
 
 
@@ -4616,6 +4617,12 @@ var ASM_CONSTS = {
   var _emscripten_memcpy_js = (dest, src, num) => HEAPU8.copyWithin(dest, src, src + num);
 
   
+  var setLetterbox = (element, topBottom, leftRight) => {
+      // Cannot use margin to specify letterboxes in FF or Chrome, since those ignore margins in fullscreen mode.
+      element.style.paddingLeft = element.style.paddingRight = leftRight + 'px';
+      element.style.paddingTop = element.style.paddingBottom = topBottom + 'px';
+    };
+  
   
   var maybeCStringToJsString = (cString) => {
       // "cString > 2" checks if the input is a number, and isn't of the special
@@ -4626,11 +4633,257 @@ var ASM_CONSTS = {
     };
   
   var specialHTMLTargets = [0, typeof document != 'undefined' ? document : 0, typeof window != 'undefined' ? window : 0];
+  /** @suppress {duplicate } */
   var findEventTarget = (target) => {
       target = maybeCStringToJsString(target);
       var domElement = specialHTMLTargets[target] || (typeof document != 'undefined' ? document.querySelector(target) : undefined);
       return domElement;
     };
+  var findCanvasEventTarget = findEventTarget;
+  var _emscripten_set_canvas_element_size = (target, width, height) => {
+      var canvas = findCanvasEventTarget(target);
+      if (!canvas) return -4;
+      canvas.width = width;
+      canvas.height = height;
+      return 0;
+    };
+  
+  
+  var _emscripten_get_canvas_element_size = (target, width, height) => {
+      var canvas = findCanvasEventTarget(target);
+      if (!canvas) return -4;
+      HEAP32[((width)>>2)] = canvas.width;
+      HEAP32[((height)>>2)] = canvas.height;
+    };
+  
+  
+  
+  
+  var stringToUTF8OnStack = (str) => {
+      var size = lengthBytesUTF8(str) + 1;
+      var ret = stackAlloc(size);
+      stringToUTF8(str, ret, size);
+      return ret;
+    };
+  var getCanvasElementSize = (target) => withStackSave(() => {
+      var w = stackAlloc(8);
+      var h = w + 4;
+  
+      var targetInt = stringToUTF8OnStack(target.id);
+      var ret = _emscripten_get_canvas_element_size(targetInt, w, h);
+      var size = [HEAP32[((w)>>2)], HEAP32[((h)>>2)]];
+      return size;
+    });
+  
+  
+  
+  var setCanvasElementSize = (target, width, height) => {
+      if (!target.controlTransferredOffscreen) {
+        target.width = width;
+        target.height = height;
+      } else {
+        // This function is being called from high-level JavaScript code instead of asm.js/Wasm,
+        // and it needs to synchronously proxy over to another thread, so marshal the string onto the heap to do the call.
+        withStackSave(() => {
+          var targetInt = stringToUTF8OnStack(target.id);
+          _emscripten_set_canvas_element_size(targetInt, width, height);
+        });
+      }
+    };
+  
+  
+  
+  
+  var registerRestoreOldStyle = (canvas) => {
+      var canvasSize = getCanvasElementSize(canvas);
+      var oldWidth = canvasSize[0];
+      var oldHeight = canvasSize[1];
+      var oldCssWidth = canvas.style.width;
+      var oldCssHeight = canvas.style.height;
+      var oldBackgroundColor = canvas.style.backgroundColor; // Chrome reads color from here.
+      var oldDocumentBackgroundColor = document.body.style.backgroundColor; // IE11 reads color from here.
+      // Firefox always has black background color.
+      var oldPaddingLeft = canvas.style.paddingLeft; // Chrome, FF, Safari
+      var oldPaddingRight = canvas.style.paddingRight;
+      var oldPaddingTop = canvas.style.paddingTop;
+      var oldPaddingBottom = canvas.style.paddingBottom;
+      var oldMarginLeft = canvas.style.marginLeft; // IE11
+      var oldMarginRight = canvas.style.marginRight;
+      var oldMarginTop = canvas.style.marginTop;
+      var oldMarginBottom = canvas.style.marginBottom;
+      var oldDocumentBodyMargin = document.body.style.margin;
+      var oldDocumentOverflow = document.documentElement.style.overflow; // Chrome, Firefox
+      var oldDocumentScroll = document.body.scroll; // IE
+      var oldImageRendering = canvas.style.imageRendering;
+  
+      function restoreOldStyle() {
+        var fullscreenElement = document.fullscreenElement
+          || document.webkitFullscreenElement
+          ;
+        if (!fullscreenElement) {
+          document.removeEventListener('fullscreenchange', restoreOldStyle);
+  
+          // Unprefixed Fullscreen API shipped in Chromium 71 (https://bugs.chromium.org/p/chromium/issues/detail?id=383813)
+          // As of Safari 13.0.3 on macOS Catalina 10.15.1 still ships with prefixed webkitfullscreenchange. TODO: revisit this check once Safari ships unprefixed version.
+          document.removeEventListener('webkitfullscreenchange', restoreOldStyle);
+  
+          setCanvasElementSize(canvas, oldWidth, oldHeight);
+  
+          canvas.style.width = oldCssWidth;
+          canvas.style.height = oldCssHeight;
+          canvas.style.backgroundColor = oldBackgroundColor; // Chrome
+          // IE11 hack: assigning 'undefined' or an empty string to document.body.style.backgroundColor has no effect, so first assign back the default color
+          // before setting the undefined value. Setting undefined value is also important, or otherwise we would later treat that as something that the user
+          // had explicitly set so subsequent fullscreen transitions would not set background color properly.
+          if (!oldDocumentBackgroundColor) document.body.style.backgroundColor = 'white';
+          document.body.style.backgroundColor = oldDocumentBackgroundColor; // IE11
+          canvas.style.paddingLeft = oldPaddingLeft; // Chrome, FF, Safari
+          canvas.style.paddingRight = oldPaddingRight;
+          canvas.style.paddingTop = oldPaddingTop;
+          canvas.style.paddingBottom = oldPaddingBottom;
+          canvas.style.marginLeft = oldMarginLeft; // IE11
+          canvas.style.marginRight = oldMarginRight;
+          canvas.style.marginTop = oldMarginTop;
+          canvas.style.marginBottom = oldMarginBottom;
+          document.body.style.margin = oldDocumentBodyMargin;
+          document.documentElement.style.overflow = oldDocumentOverflow; // Chrome, Firefox
+          document.body.scroll = oldDocumentScroll; // IE
+          canvas.style.imageRendering = oldImageRendering;
+          if (canvas.GLctxObject) canvas.GLctxObject.GLctx.viewport(0, 0, oldWidth, oldHeight);
+  
+          if (currentFullscreenStrategy.canvasResizedCallback) {
+            ((a1, a2, a3) => dynCall_iiii.apply(null, [currentFullscreenStrategy.canvasResizedCallback, a1, a2, a3]))(37, 0, currentFullscreenStrategy.canvasResizedCallbackUserData);
+          }
+        }
+      }
+      document.addEventListener('fullscreenchange', restoreOldStyle);
+      // Unprefixed Fullscreen API shipped in Chromium 71 (https://bugs.chromium.org/p/chromium/issues/detail?id=383813)
+      // As of Safari 13.0.3 on macOS Catalina 10.15.1 still ships with prefixed webkitfullscreenchange. TODO: revisit this check once Safari ships unprefixed version.
+      document.addEventListener('webkitfullscreenchange', restoreOldStyle);
+      return restoreOldStyle;
+    };
+  
+  
+  
+  
+  var getBoundingClientRect = (e) => specialHTMLTargets.indexOf(e) < 0 ? e.getBoundingClientRect() : {'left':0,'top':0};
+  var JSEvents_resizeCanvasForFullscreen = (target, strategy) => {
+      var restoreOldStyle = registerRestoreOldStyle(target);
+      var cssWidth = strategy.softFullscreen ? innerWidth : screen.width;
+      var cssHeight = strategy.softFullscreen ? innerHeight : screen.height;
+      var rect = getBoundingClientRect(target);
+      var windowedCssWidth = rect.width;
+      var windowedCssHeight = rect.height;
+      var canvasSize = getCanvasElementSize(target);
+      var windowedRttWidth = canvasSize[0];
+      var windowedRttHeight = canvasSize[1];
+  
+      if (strategy.scaleMode == 3) {
+        setLetterbox(target, (cssHeight - windowedCssHeight) / 2, (cssWidth - windowedCssWidth) / 2);
+        cssWidth = windowedCssWidth;
+        cssHeight = windowedCssHeight;
+      } else if (strategy.scaleMode == 2) {
+        if (cssWidth*windowedRttHeight < windowedRttWidth*cssHeight) {
+          var desiredCssHeight = windowedRttHeight * cssWidth / windowedRttWidth;
+          setLetterbox(target, (cssHeight - desiredCssHeight) / 2, 0);
+          cssHeight = desiredCssHeight;
+        } else {
+          var desiredCssWidth = windowedRttWidth * cssHeight / windowedRttHeight;
+          setLetterbox(target, 0, (cssWidth - desiredCssWidth) / 2);
+          cssWidth = desiredCssWidth;
+        }
+      }
+  
+      // If we are adding padding, must choose a background color or otherwise Chrome will give the
+      // padding a default white color. Do it only if user has not customized their own background color.
+      if (!target.style.backgroundColor) target.style.backgroundColor = 'black';
+      // IE11 does the same, but requires the color to be set in the document body.
+      if (!document.body.style.backgroundColor) document.body.style.backgroundColor = 'black'; // IE11
+      // Firefox always shows black letterboxes independent of style color.
+  
+      target.style.width = cssWidth + 'px';
+      target.style.height = cssHeight + 'px';
+  
+      if (strategy.filteringMode == 1) {
+        target.style.imageRendering = 'optimizeSpeed';
+        target.style.imageRendering = '-moz-crisp-edges';
+        target.style.imageRendering = '-o-crisp-edges';
+        target.style.imageRendering = '-webkit-optimize-contrast';
+        target.style.imageRendering = 'optimize-contrast';
+        target.style.imageRendering = 'crisp-edges';
+        target.style.imageRendering = 'pixelated';
+      }
+  
+      var dpiScale = (strategy.canvasResolutionScaleMode == 2) ? devicePixelRatio : 1;
+      if (strategy.canvasResolutionScaleMode != 0) {
+        var newWidth = (cssWidth * dpiScale)|0;
+        var newHeight = (cssHeight * dpiScale)|0;
+        setCanvasElementSize(target, newWidth, newHeight);
+        if (target.GLctxObject) target.GLctxObject.GLctx.viewport(0, 0, newWidth, newHeight);
+      }
+      return restoreOldStyle;
+    };
+  var JSEvents_requestFullscreen = (target, strategy) => {
+      // EMSCRIPTEN_FULLSCREEN_SCALE_DEFAULT + EMSCRIPTEN_FULLSCREEN_CANVAS_SCALE_NONE is a mode where no extra logic is performed to the DOM elements.
+      if (strategy.scaleMode != 0 || strategy.canvasResolutionScaleMode != 0) {
+        JSEvents_resizeCanvasForFullscreen(target, strategy);
+      }
+  
+      if (target.requestFullscreen) {
+        target.requestFullscreen();
+      } else if (target.webkitRequestFullscreen) {
+        target.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+      } else {
+        return JSEvents.fullscreenEnabled() ? -3 : -1;
+      }
+  
+      currentFullscreenStrategy = strategy;
+  
+      if (strategy.canvasResizedCallback) {
+        ((a1, a2, a3) => dynCall_iiii.apply(null, [strategy.canvasResizedCallback, a1, a2, a3]))(37, 0, strategy.canvasResizedCallbackUserData);
+      }
+  
+      return 0;
+    };
+  
+  var doRequestFullscreen = (target, strategy) => {
+      if (!JSEvents.fullscreenEnabled()) return -1;
+      target = findEventTarget(target);
+      if (!target) return -4;
+  
+      if (!target.requestFullscreen
+        && !target.webkitRequestFullscreen
+        ) {
+        return -3;
+      }
+  
+      var canPerformRequests = JSEvents.canPerformEventHandlerRequests();
+  
+      // Queue this function call if we're not currently in an event handler and the user saw it appropriate to do so.
+      if (!canPerformRequests) {
+        if (strategy.deferUntilInEventHandler) {
+          JSEvents.deferCall(JSEvents_requestFullscreen, 1 /* priority over pointer lock */, [target, strategy]);
+          return 1;
+        }
+        return -2;
+      }
+  
+      return JSEvents_requestFullscreen(target, strategy);
+    };
+  var _emscripten_request_fullscreen = (target, deferUntilInEventHandler) => {
+      var strategy = {
+        // These options perform no added logic, but just bare request fullscreen.
+        scaleMode: 0,
+        canvasResolutionScaleMode: 0,
+        filteringMode: 0,
+        deferUntilInEventHandler,
+        canvasResizedCallbackTargetThread: 2
+      };
+      return doRequestFullscreen(target, strategy);
+    };
+
+  
+  
   var _emscripten_request_pointerlock = (target, deferUntilInEventHandler) => {
       target = findEventTarget(target);
       if (!target) return -4;
@@ -4678,15 +4931,6 @@ var ASM_CONSTS = {
       return -1;
     };
 
-  
-  var findCanvasEventTarget = findEventTarget;
-  var _emscripten_set_canvas_element_size = (target, width, height) => {
-      var canvas = findCanvasEventTarget(target);
-      if (!canvas) return -4;
-      canvas.width = width;
-      canvas.height = height;
-      return 0;
-    };
 
   
   
@@ -4864,7 +5108,6 @@ var ASM_CONSTS = {
 
   
   
-  var getBoundingClientRect = (e) => specialHTMLTargets.indexOf(e) < 0 ? e.getBoundingClientRect() : {'left':0,'top':0};
   
   var fillMouseEventData = (eventStruct, e, target) => {
       assert(eventStruct % 4 == 0);
@@ -11818,13 +12061,6 @@ var ASM_CONSTS = {
 
 
 
-  
-  var stringToUTF8OnStack = (str) => {
-      var size = lengthBytesUTF8(str) + 1;
-      var ret = stackAlloc(size);
-      stringToUTF8(str, ret, size);
-      return ret;
-    };
 
 
   var runAndAbortIfError = (func) => {
@@ -12208,6 +12444,8 @@ var wasmImports = {
   /** @export */
   emscripten_memcpy_js: _emscripten_memcpy_js,
   /** @export */
+  emscripten_request_fullscreen: _emscripten_request_fullscreen,
+  /** @export */
   emscripten_request_pointerlock: _emscripten_request_pointerlock,
   /** @export */
   emscripten_resize_heap: _emscripten_resize_heap,
@@ -12427,14 +12665,9 @@ var missingLibrarySymbols = [
   'screenOrientation',
   'fillOrientationChangeEventData',
   'registerOrientationChangeEventCallback',
-  'JSEvents_requestFullscreen',
-  'JSEvents_resizeCanvasForFullscreen',
-  'registerRestoreOldStyle',
   'hideEverythingExceptGivenElement',
   'restoreHiddenElements',
-  'setLetterbox',
   'softFullscreenResizeWebGLRenderTarget',
-  'doRequestFullscreen',
   'fillPointerlockChangeEventData',
   'registerPointerlockChangeEventCallback',
   'registerPointerlockErrorEventCallback',
@@ -12444,8 +12677,6 @@ var missingLibrarySymbols = [
   'fillBatteryEventData',
   'battery',
   'registerBatteryEventCallback',
-  'setCanvasElementSize',
-  'getCanvasElementSize',
   'jsStackTrace',
   'stackTrace',
   'checkWasiClock',
@@ -12585,12 +12816,19 @@ var unexportedSymbols = [
   'registerFocusEventCallback',
   'fillFullscreenChangeEventData',
   'registerFullscreenChangeEventCallback',
+  'JSEvents_requestFullscreen',
+  'JSEvents_resizeCanvasForFullscreen',
+  'registerRestoreOldStyle',
+  'setLetterbox',
   'currentFullscreenStrategy',
   'restoreOldWindowedStyle',
+  'doRequestFullscreen',
   'requestPointerLock',
   'registerTouchEventCallback',
   'fillGamepadEventData',
   'registerGamepadEventCallback',
+  'setCanvasElementSize',
+  'getCanvasElementSize',
   'demangle',
   'demangleAll',
   'ExitStatus',
