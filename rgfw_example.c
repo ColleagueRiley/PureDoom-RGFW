@@ -31,96 +31,88 @@
 #define WIDTH 320
 #define HEIGHT 200
 
-doom_key_t RGFW_keycode_to_doom_key(u32 keycode) {
-    switch (keycode) {
-        case RGFW_Tab: return DOOM_KEY_TAB;
-        case RGFW_Return: return DOOM_KEY_ENTER;
-        case RGFW_Escape: return DOOM_KEY_ESCAPE;
-        case RGFW_Space: return DOOM_KEY_SPACE;
-        case RGFW_Quote: return DOOM_KEY_APOSTROPHE;
-        case RGFW_Multiply: return DOOM_KEY_MULTIPLY;
-        case RGFW_Comma: return DOOM_KEY_COMMA;
-        case RGFW_Minus: return DOOM_KEY_MINUS;
-        case RGFW_Period: return DOOM_KEY_PERIOD;
-        case RGFW_Slash: return DOOM_KEY_SLASH;
-        case RGFW_0: return DOOM_KEY_0;
-        case RGFW_1: return DOOM_KEY_1;
-        case RGFW_2: return DOOM_KEY_2;
-        case RGFW_3: return DOOM_KEY_3;
-        case RGFW_4: return DOOM_KEY_4;
-        case RGFW_5: return DOOM_KEY_5;
-        case RGFW_6: return DOOM_KEY_6;
-        case RGFW_7: return DOOM_KEY_7;
-        case RGFW_8: return DOOM_KEY_8;
-        case RGFW_9: return DOOM_KEY_9;
-        case RGFW_Semicolon: return DOOM_KEY_SEMICOLON;
-        case RGFW_Equals: return DOOM_KEY_EQUALS;
-        case RGFW_Bracket: return DOOM_KEY_LEFT_BRACKET;
-        case RGFW_CloseBracket: return DOOM_KEY_RIGHT_BRACKET;
-        case RGFW_a: return DOOM_KEY_A;
-        case RGFW_b: return DOOM_KEY_B;
-        case RGFW_c: return DOOM_KEY_C;
-        case RGFW_d: return DOOM_KEY_D;
-        case RGFW_e: return DOOM_KEY_E;
-        case RGFW_f: return DOOM_KEY_F;
-        case RGFW_g: return DOOM_KEY_G;
-        case RGFW_h: return DOOM_KEY_H;
-        case RGFW_i: return DOOM_KEY_I;
-        case RGFW_j: return DOOM_KEY_J;
-        case RGFW_k: return DOOM_KEY_K;
-        case RGFW_l: return DOOM_KEY_L;
-        case RGFW_m: return DOOM_KEY_M;
-        case RGFW_n: return DOOM_KEY_N;
-        case RGFW_o: return DOOM_KEY_O;
-        case RGFW_p: return DOOM_KEY_P;
-        case RGFW_q: return DOOM_KEY_Q;
-        case RGFW_r: return DOOM_KEY_R;
-        case RGFW_s: return DOOM_KEY_S;
-        case RGFW_t: return DOOM_KEY_T;
-        case RGFW_u: return DOOM_KEY_U;
-        case RGFW_v: return DOOM_KEY_V;
-        case RGFW_w: return DOOM_KEY_W;
-        case RGFW_x: return DOOM_KEY_X;
-        case RGFW_y: return DOOM_KEY_Y;
-        case RGFW_z: return DOOM_KEY_Z;
-        case RGFW_BackSpace: return DOOM_KEY_BACKSPACE; 
-		case RGFW_AltL:
-        case RGFW_AltR: return DOOM_KEY_ALT;
-        case RGFW_ControlL: 
-		case RGFW_ControlR: return DOOM_KEY_CTRL;
-        case RGFW_Left: return DOOM_KEY_LEFT_ARROW;
-        case RGFW_Up: return DOOM_KEY_UP_ARROW;
-        case RGFW_Right: return DOOM_KEY_RIGHT_ARROW;
-        case RGFW_Down: return DOOM_KEY_DOWN_ARROW;        
-        case RGFW_ShiftL:
-		case RGFW_ShiftR: return DOOM_KEY_SHIFT;
-        case RGFW_F1: return DOOM_KEY_F1;
-        case RGFW_F2: return DOOM_KEY_F2;
-        case RGFW_F3: return DOOM_KEY_F3;
-        case RGFW_F4: return DOOM_KEY_F4;
-        case RGFW_F5: return DOOM_KEY_F5;
-        case RGFW_F6: return DOOM_KEY_F6;
-        case RGFW_F7: return DOOM_KEY_F7;
-        case RGFW_F8: return DOOM_KEY_F8;
-        case RGFW_F9: return DOOM_KEY_F9;
-        case RGFW_F10: return DOOM_KEY_F10;
-        case RGFW_F11: return DOOM_KEY_F11;
-        case RGFW_F12: return DOOM_KEY_F12;
-        default: return DOOM_KEY_UNKNOWN;
-    }
-
-    return DOOM_KEY_UNKNOWN;
-}
+doom_key_t RGFWScancode2DOOM[RGFW_final_key] = {
+    [RGFW_Tab] = DOOM_KEY_TAB,
+    [RGFW_Return] = DOOM_KEY_ENTER,
+    [RGFW_Escape] = DOOM_KEY_ESCAPE,
+    [RGFW_Space] = DOOM_KEY_SPACE,
+    [RGFW_Apostrophe] = DOOM_KEY_APOSTROPHE,
+    [RGFW_Multiply] = DOOM_KEY_MULTIPLY,
+    [RGFW_Comma] = DOOM_KEY_COMMA,
+    [RGFW_Minus] = DOOM_KEY_MINUS,
+    [RGFW_Period] = DOOM_KEY_PERIOD,
+    [RGFW_Slash] = DOOM_KEY_SLASH,
+    [RGFW_0] = DOOM_KEY_0,
+    [RGFW_1] = DOOM_KEY_1,
+    [RGFW_2] = DOOM_KEY_2,
+    [RGFW_3] = DOOM_KEY_3,
+    [RGFW_4] = DOOM_KEY_4,
+    [RGFW_5] = DOOM_KEY_5,
+    [RGFW_6] = DOOM_KEY_6,
+    [RGFW_7] = DOOM_KEY_7,
+    [RGFW_8] = DOOM_KEY_8,
+    [RGFW_9] = DOOM_KEY_9,
+    [RGFW_Semicolon] = DOOM_KEY_SEMICOLON,
+    [RGFW_Equals] = DOOM_KEY_EQUALS,
+    [RGFW_Bracket] = DOOM_KEY_LEFT_BRACKET,
+    [RGFW_CloseBracket] = DOOM_KEY_RIGHT_BRACKET,
+    [RGFW_a] = DOOM_KEY_A,
+    [RGFW_b] = DOOM_KEY_B,
+    [RGFW_c] = DOOM_KEY_C,
+    [RGFW_d] = DOOM_KEY_D,
+    [RGFW_e] = DOOM_KEY_E,
+    [RGFW_f] = DOOM_KEY_F,
+    [RGFW_g] = DOOM_KEY_G,
+    [RGFW_h] = DOOM_KEY_H,
+    [RGFW_i] = DOOM_KEY_I,
+    [RGFW_j] = DOOM_KEY_J,
+    [RGFW_k] = DOOM_KEY_K,
+    [RGFW_l] = DOOM_KEY_L,
+    [RGFW_m] = DOOM_KEY_M,
+    [RGFW_n] = DOOM_KEY_N,
+    [RGFW_o] = DOOM_KEY_O,
+    [RGFW_p] = DOOM_KEY_P,
+    [RGFW_q] = DOOM_KEY_Q,
+    [RGFW_r] = DOOM_KEY_R,
+    [RGFW_s] = DOOM_KEY_S,
+    [RGFW_t] = DOOM_KEY_T,
+    [RGFW_u] = DOOM_KEY_U,
+    [RGFW_v] = DOOM_KEY_V,
+    [RGFW_w] = DOOM_KEY_W,
+    [RGFW_x] = DOOM_KEY_X,
+    [RGFW_y] = DOOM_KEY_Y,
+    [RGFW_z] = DOOM_KEY_Z,
+    [RGFW_BackSpace] = DOOM_KEY_BACKSPACE,
+    [RGFW_AltL] = DOOM_KEY_ALT,
+    [RGFW_AltR] = DOOM_KEY_ALT,
+    [RGFW_ControlL] = DOOM_KEY_CTRL,
+    [RGFW_ControlR] = DOOM_KEY_CTRL,
+    [RGFW_Left] = DOOM_KEY_LEFT_ARROW,
+    [RGFW_Up] = DOOM_KEY_UP_ARROW,
+    [RGFW_Right] = DOOM_KEY_RIGHT_ARROW,
+    [RGFW_Down] = DOOM_KEY_DOWN_ARROW,      
+    [RGFW_ShiftL] = DOOM_KEY_SHIFT,
+    [RGFW_ShiftR] = DOOM_KEY_SHIFT,
+    [RGFW_F1] = DOOM_KEY_F1,
+    [RGFW_F2] = DOOM_KEY_F2,
+    [RGFW_F3] = DOOM_KEY_F3,
+    [RGFW_F4] = DOOM_KEY_F4,
+    [RGFW_F5] = DOOM_KEY_F5,
+    [RGFW_F6] = DOOM_KEY_F6,
+    [RGFW_F7] = DOOM_KEY_F7,
+    [RGFW_F8] = DOOM_KEY_F8,
+    [RGFW_F9] = DOOM_KEY_F9,
+    [RGFW_F10] = DOOM_KEY_F10,
+    [RGFW_F11] = DOOM_KEY_F11,
+    [RGFW_F12] = DOOM_KEY_F12,
+};
 
 
-doom_button_t RGFW_button_to_doom_button(u8 RGFW_button) {
-    switch (RGFW_button) {
-        case RGFW_mouseLeft: return DOOM_LEFT_BUTTON;
-        case RGFW_mouseRight: return DOOM_RIGHT_BUTTON;
-        case RGFW_mouseMiddle: return DOOM_MIDDLE_BUTTON;
-    }
-    return (doom_button_t)3;
-}
+doom_button_t RGFWButton2DOOM[4] = {
+    [RGFW_mouseLeft] = DOOM_LEFT_BUTTON,
+    [RGFW_mouseRight] = DOOM_RIGHT_BUTTON,
+    [RGFW_mouseMiddle] = DOOM_MIDDLE_BUTTON,
+};
 
 /* this can also be used to convert BGR to RGB */
 void bitmap_rgbToBgr(u8* bitmap, RGFW_area a) {
@@ -188,8 +180,8 @@ void audio_callback(ma_device* pDevice, void* pOutput, const void* pInput, ma_ui
 
 
 void* thread(void* args) {
-    static u32 midi_time = 0;
-    static u32 lastTime = 0;
+    static u64 midi_time = 0;
+    static u64 lastTime = 0;
 
     while (1) {
         if (RGFW_getTimeNS() - lastTime >= midi_time) {
@@ -307,7 +299,7 @@ int main(int argc, char** args) {
 					 * I don't know a better way to do this without it causing
 					 * bugs or having to modify PureDOOM
 					*/
-					if (window->event.keyCode == RGFW_End || (window->event.keyCode == RGFW_ShiftL && RGFW_isPressed(window, RGFW_Escape)))
+					if (window->event.key == RGFW_End || (window->event.key == RGFW_ShiftL && RGFW_isPressed(window, RGFW_Escape)))
                     {
 						RGFW_window_showMouse(window, active_mouse);
                         if (active_mouse)
@@ -318,19 +310,19 @@ int main(int argc, char** args) {
                         active_mouse = !active_mouse;
                     }
 
-                    doom_key_down(RGFW_keycode_to_doom_key(window->event.keyCode));
+                    doom_key_down(RGFWScancode2DOOM[window->event.key]);
                     break;
 
                 case RGFW_keyReleased:
-                    doom_key_up(RGFW_keycode_to_doom_key(window->event.keyCode));
+                    doom_key_up(RGFWScancode2DOOM[window->event.key]);
                     break;
 
                 case RGFW_mouseButtonPressed:
-                    if (active_mouse) doom_button_down(RGFW_button_to_doom_button(window->event.button));
+                    if (active_mouse) doom_button_down(RGFWButton2DOOM[window->event.button]);
                     break;
 
                 case RGFW_mouseButtonReleased:
-                    if (active_mouse) doom_button_up(RGFW_button_to_doom_button(window->event.button));
+                    if (active_mouse) doom_button_up(RGFWButton2DOOM[window->event.button]);
                     break;
 
                 case RGFW_mousePosChanged:
