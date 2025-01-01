@@ -35,7 +35,7 @@ doom_key_t RGFWScancode2DOOM[RGFW_final_key] = {
     [RGFW_Tab] = DOOM_KEY_TAB,
     [RGFW_Return] = DOOM_KEY_ENTER,
     [RGFW_Escape] = DOOM_KEY_ESCAPE,
-    [RGFW_Space] = DOOM_KEY_SPACE,
+    [RGFW_Space] = DOOM_KEY_CTRL,
     [RGFW_Apostrophe] = DOOM_KEY_APOSTROPHE,
     [RGFW_Multiply] = DOOM_KEY_MULTIPLY,
     [RGFW_Comma] = DOOM_KEY_COMMA,
@@ -107,6 +107,58 @@ doom_key_t RGFWScancode2DOOM[RGFW_final_key] = {
     [RGFW_F12] = DOOM_KEY_F12,
 };
 
+doom_key_t RGFWGamepad2DOOM[20] = {
+    [RGFW_GP_Y] = DOOM_KEY_TAB,
+    [RGFW_GP_SELECT] = DOOM_KEY_ENTER,
+    [RGFW_GP_START] = DOOM_KEY_ESCAPE,
+    [RGFW_GP_X] = DOOM_KEY_CTRL,
+    [RGFW_GP_A] = DOOM_KEY_E,
+    [RGFW_GP_R2] = DOOM_KEY_CTRL,
+    [RGFW_GP_LEFT] = DOOM_KEY_A,
+    [RGFW_GP_RIGHT] = DOOM_KEY_D,
+    [RGFW_GP_UP] = DOOM_KEY_UP_ARROW,
+    [RGFW_GP_DOWN] = DOOM_KEY_DOWN_ARROW,      
+    [RGFW_GP_L3] = DOOM_KEY_SHIFT,
+    
+    [RGFW_GP_HOME] = DOOM_KEY_UNKNOWN,
+    [RGFW_GP_B] = DOOM_KEY_UNKNOWN,
+    [RGFW_GP_L2] = DOOM_KEY_UNKNOWN,
+    [RGFW_GP_R3] = DOOM_KEY_UNKNOWN,
+    [RGFW_GP_L1] = DOOM_KEY_UNKNOWN,
+    [RGFW_GP_R1] = DOOM_KEY_UNKNOWN,
+};
+
+void gamepad_update(u32 button, u32 press) {
+    u32 Dbutton = RGFWGamepad2DOOM[button];
+    u32 Dbutton2 = DOOM_KEY_UNKNOWN;
+
+    static char weapon = DOOM_KEY_1;
+    if (button == RGFW_GP_R1 && weapon < DOOM_KEY_7) {
+        if (press == 0) weapon++;
+        press = !press;
+        Dbutton2 = weapon;
+    }
+    else if (button == RGFW_GP_L1 && weapon > DOOM_KEY_1 && press == 0) {
+        if (press == 0) weapon--;
+        press = !press;
+        Dbutton2 = weapon;
+    }
+
+    switch (Dbutton) {
+        case DOOM_KEY_E: Dbutton2 = DOOM_KEY_ENTER; break;
+        case DOOM_KEY_UP_ARROW: Dbutton2 = DOOM_KEY_W; break;
+        case DOOM_KEY_DOWN_ARROW: Dbutton2 = DOOM_KEY_S; break;
+        default: break;
+    }
+    
+    if (press) {
+        doom_key_down(Dbutton);
+        doom_key_down(Dbutton2);
+    } else {
+        doom_key_up(Dbutton);
+        doom_key_up(Dbutton2);
+    }
+}
 
 doom_button_t RGFWButton2DOOM[4] = {
     [RGFW_mouseLeft] = DOOM_LEFT_BUTTON,
@@ -231,11 +283,9 @@ int main(int argc, char** args) {
     doom_set_default_int("key_strafeleft", DOOM_KEY_A);
     doom_set_default_int("key_straferight", DOOM_KEY_D);
     doom_set_default_int("key_use", DOOM_KEY_E);
-#ifdef __EMSCRIPTEN__
-    doom_set_default_int("key_fire", DOOM_KEY_SPACE);
-#endif
+    doom_set_default_int("key_fire", DOOM_KEY_CTRL);
     doom_set_default_int("mouse_move", 0); // Mouse will not move forward
-   
+    
     // Setup resolution
     doom_set_resolution(WIDTH, HEIGHT);
 
@@ -330,6 +380,56 @@ int main(int argc, char** args) {
                     {
 						doom_mouse_move(window->event.point.x * 10, 0);
 					}
+                    break;
+                case RGFW_gpButtonPressed:
+                    gamepad_update(window->event.button, 1);
+                    break;
+                case RGFW_gpButtonReleased:
+                    gamepad_update(window->event.button, 0);
+                    break;
+                case RGFW_gpAxisMove:
+                    // axis 12
+                    switch (window->event.whichAxis) {
+                        case 0:
+                            if (window->event.axis[0].x >= 50) {
+                                doom_key_down(DOOM_KEY_D);
+                            }
+                            else if (window->event.axis[0].x <= -50)
+                                doom_key_down(DOOM_KEY_A);
+                            else {
+                                doom_key_up(DOOM_KEY_A);
+                                doom_key_up(DOOM_KEY_D);
+                            }
+                            
+                            if (window->event.axis[0].y >= 50) {
+                                doom_key_down(DOOM_KEY_S);
+                                doom_key_up(DOOM_KEY_DOWN_ARROW);
+                            }
+                            else if (window->event.axis[0].y <= -50) {
+                                doom_key_down(DOOM_KEY_W);
+                                doom_key_up(DOOM_KEY_UP_ARROW);
+                            }
+                            else {
+                                doom_key_up(DOOM_KEY_W);
+                                doom_key_up(DOOM_KEY_S);
+                                doom_key_up(DOOM_KEY_UP_ARROW);
+                                doom_key_up(DOOM_KEY_DOWN_ARROW);
+                            }
+                            break;                        
+                        // axis 2
+                        case 1:
+                            if (window->event.axis[1].x >= 50) {
+                                doom_key_down(DOOM_KEY_RIGHT_ARROW);
+                            }
+                            else if (window->event.axis[1].x <= -50)
+                                doom_key_down(DOOM_KEY_LEFT_ARROW);
+                            else {
+                                doom_key_up(DOOM_KEY_LEFT_ARROW);
+                                doom_key_up(DOOM_KEY_RIGHT_ARROW);
+                            }
+                            break;
+                        default: break;
+                    }
                     break;
             }
             if (done) break;
