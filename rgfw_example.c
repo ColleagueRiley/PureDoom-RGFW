@@ -138,6 +138,30 @@ void send_midi_msg(uint32_t midi_msg)
         midiOutShortMsg(midi_out_handle, midi_msg);
     }
 }
+#elif defined(__EMSCRIPTEN__)
+void send_midi_msg(uint32_t midi_msg) {
+    uint8_t status = (midi_msg & 0xFF);
+    uint8_t data1 = (midi_msg >> 8) & 0xFF;
+    uint8_t data2 = (midi_msg >> 16) & 0xFF;
+
+    EM_ASM_({
+        const status = $0;
+        const data1 = $1;
+        const data2 = $2;
+
+        navigator.requestMIDIAccess().then((midiAccess) => {
+            const outputs = Array.from(midiAccess.outputs.values());
+            if (outputs.length > 0) {
+                const output = outputs[0];
+                output.send([status, data1, data2]);
+            } else {
+                console.log("No MIDI output devices available.");
+            }
+        }).catch((err) => {
+            console.error("MIDI access error:", err);
+        });
+    }, status, data1, data2);
+}
 #elif defined(__APPLE__)
 AudioUnit audio_unit = 0;
 void send_midi_msg(uint32_t midi_msg)
