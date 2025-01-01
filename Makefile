@@ -36,7 +36,7 @@ ifeq ($(detected_OS),Windows)
 
 endif
 ifeq ($(detected_OS),Darwin)        # Mac OS X
-	LIBS := -lm -framework Foundation -framework AppKit -framework CoreVideo$(STATIC)  -framework AudioToolbox
+	LIBS := -lm -framework Foundation -framework AppKit -framework IOKit $(STATIC)  -framework AudioToolbox
 	EXT = 
 	WARNINGS = 
 	OS_DIR = /
