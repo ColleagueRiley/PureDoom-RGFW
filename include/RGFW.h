@@ -8686,7 +8686,7 @@ RGFW_UNUSED(win); /*!< if buffer rendering is not being used */
 
 #ifdef RGFW_BUFFER
 		NSRelease(win->src.bitmap);
-		NSrelease(win->src.image);
+		NSRelease(win->src.image);
 #endif
 
 		RGFW_FREE(win);
