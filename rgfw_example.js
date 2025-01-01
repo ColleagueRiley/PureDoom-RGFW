@@ -133,7 +133,7 @@ Module['FS_createPath']("/.git/logs/refs/remotes", "origin", true, true);
 Module['FS_createPath']("/.git", "objects", true, true);
 Module['FS_createPath']("/.git/objects", "07", true, true);
 Module['FS_createPath']("/.git/objects", "1a", true, true);
-Module['FS_createPath']("/.git/objects", "39", true, true);
+Module['FS_createPath']("/.git/objects", "33", true, true);
 Module['FS_createPath']("/.git/objects", "3b", true, true);
 Module['FS_createPath']("/.git/objects", "4e", true, true);
 Module['FS_createPath']("/.git/objects", "53", true, true);
@@ -142,9 +142,8 @@ Module['FS_createPath']("/.git/objects", "65", true, true);
 Module['FS_createPath']("/.git/objects", "94", true, true);
 Module['FS_createPath']("/.git/objects", "a5", true, true);
 Module['FS_createPath']("/.git/objects", "ad", true, true);
-Module['FS_createPath']("/.git/objects", "b0", true, true);
-Module['FS_createPath']("/.git/objects", "bc", true, true);
-Module['FS_createPath']("/.git/objects", "c9", true, true);
+Module['FS_createPath']("/.git/objects", "b8", true, true);
+Module['FS_createPath']("/.git/objects", "bb", true, true);
 Module['FS_createPath']("/.git/objects", "d8", true, true);
 Module['FS_createPath']("/.git/objects", "e2", true, true);
 Module['FS_createPath']("/.git/objects", "f2", true, true);
@@ -225,7 +224,7 @@ Module['FS_createPath']("/", "include", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/.git/FETCH_HEAD", "start": 0, "end": 136}, {"filename": "/.git/HEAD", "start": 136, "end": 157}, {"filename": "/.git/config", "start": 157, "end": 582}, {"filename": "/.git/description", "start": 582, "end": 655}, {"filename": "/.git/hooks/applypatch-msg.sample", "start": 655, "end": 1133}, {"filename": "/.git/hooks/commit-msg.sample", "start": 1133, "end": 2029}, {"filename": "/.git/hooks/fsmonitor-watchman.sample", "start": 2029, "end": 6755}, {"filename": "/.git/hooks/post-update.sample", "start": 6755, "end": 6944}, {"filename": "/.git/hooks/pre-applypatch.sample", "start": 6944, "end": 7368}, {"filename": "/.git/hooks/pre-commit.sample", "start": 7368, "end": 9017}, {"filename": "/.git/hooks/pre-merge-commit.sample", "start": 9017, "end": 9433}, {"filename": "/.git/hooks/pre-push.sample", "start": 9433, "end": 10807}, {"filename": "/.git/hooks/pre-rebase.sample", "start": 10807, "end": 15705}, {"filename": "/.git/hooks/pre-receive.sample", "start": 15705, "end": 16249}, {"filename": "/.git/hooks/prepare-commit-msg.sample", "start": 16249, "end": 17741}, {"filename": "/.git/hooks/push-to-checkout.sample", "start": 17741, "end": 20524}, {"filename": "/.git/hooks/sendemail-validate.sample", "start": 20524, "end": 22832}, {"filename": "/.git/hooks/update.sample", "start": 22832, "end": 26482}, {"filename": "/.git/index", "start": 26482, "end": 27894}, {"filename": "/.git/info/exclude", "start": 27894, "end": 28134}, {"filename": "/.git/logs/HEAD", "start": 28134, "end": 28351}, {"filename": "/.git/logs/refs/heads/main", "start": 28351, "end": 28577}, {"filename": "/.git/logs/refs/remotes/origin/main", "start": 28577, "end": 28913}, {"filename": "/.git/objects/07/df4d9a97a1f34d1baf44a8914a932155e2886d", "start": 28913, "end": 29897}, {"filename": "/.git/objects/1a/58f66277d6bc869dfeb701591bd39f25eaacd0", "start": 29897, "end": 1935095}, {"filename": "/.git/objects/39/9a3a8b734a9a589528fa2006c47dbe75f6df7f", "start": 1935095, "end": 1935259}, {"filename": "/.git/objects/3b/13203076bfc39203e0d8606cb7b1f15925f25e", "start": 1935259, "end": 1938949}, {"filename": "/.git/objects/4e/f4547aefa30c7f48c2be88c4f1a51382fce816", "start": 1938949, "end": 2294250}, {"filename": "/.git/objects/53/d6bbaf9307c2ed1f5922382e55fd267d6eeae8", "start": 2294250, "end": 2294585}, {"filename": "/.git/objects/60/3df2c5e18d0e5d50da24b23a829907d78560e3", "start": 2294585, "end": 2294636}, {"filename": "/.git/objects/65/2024e13b3742986f8fdfc047202ff62d4cfbf0", "start": 2294636, "end": 2294780}, {"filename": "/.git/objects/94/2a688e0262975daf8af6dda5fc81f57c78fb97", "start": 2294780, "end": 3091818}, {"filename": "/.git/objects/a5/fbb79337d2cf393675e1e1984eb6ca7e6df55b", "start": 3091818, "end": 3092029}, {"filename": "/.git/objects/ad/d5b587422b9939a3ee4dde2d3de4287fdb0b00", "start": 3092029, "end": 3092180}, {"filename": "/.git/objects/b0/608883e2ee2310e48fabe823a7984805c4e83d", "start": 3092180, "end": 3178966}, {"filename": "/.git/objects/bc/b3a0cdaf7f06b468137e0c8de28aaae6b7d48e", "start": 3178966, "end": 3179285}, {"filename": "/.git/objects/c9/f68c153e47492a185cbfaf5209db907fab42a2", "start": 3179285, "end": 3179447}, {"filename": "/.git/objects/d8/edf9e5250979dda18ed4fb7d11169df14ad1cd", "start": 3179447, "end": 3179551}, {"filename": "/.git/objects/e2/74c08d04d669636eba27aa2eb4d4b6bf93e1bd", "start": 3179551, "end": 3179732}, {"filename": "/.git/objects/f2/e558dc49564f6970abf208a7c174e2707f4f01", "start": 3179732, "end": 3179881}, {"filename": "/.git/objects/f5/0333a44314b4e1bb99a0273fab045e7a91d60c", "start": 3179881, "end": 3276900}, {"filename": "/.git/objects/fb/62f53800cdf591d20fb814ef1a03d0c5504fb4", "start": 3276900, "end": 3277813}, {"filename": "/.git/objects/fd/ddb29aa445bf3d6a5d843d6dd77e10a9f99657", "start": 3277813, "end": 3278534}, {"filename": "/.git/refs/heads/main", "start": 3278534, "end": 3278575}, {"filename": "/.git/refs/remotes/origin/main", "start": 3278575, "end": 3278616}, {"filename": "/.git/shallow", "start": 3278616, "end": 3278657}, {"filename": "/.github/workflows/linux.yml", "start": 3278657, "end": 3279038}, {"filename": "/.github/workflows/macos.yml", "start": 3279038, "end": 3279249}, {"filename": "/.github/workflows/web.yml", "start": 3279249, "end": 3279812}, {"filename": "/.github/workflows/windows.yml", "start": 3279812, "end": 3280027}, {"filename": "/LICENSE", "start": 3280027, "end": 3281238}, {"filename": "/Makefile", "start": 3281238, "end": 3283451}, {"filename": "/README.md", "start": 3283451, "end": 3283560}, {"filename": "/doom1.wad", "start": 3283560, "end": 7479580}, {"filename": "/include/PureDOOM.h", "start": 7479580, "end": 8748809}, {"filename": "/include/RGFW.h", "start": 8748809, "end": 9045277}, {"filename": "/include/miniaudio.h", "start": 9045277, "end": 12899291}, {"filename": "/include/stb_image_resize2.h", "start": 12899291, "end": 13341390}, {"filename": "/index.html", "start": 13341390, "end": 13343234}, {"filename": "/libs.c", "start": 13343234, "end": 13343602}, {"filename": "/libs.o", "start": 13343602, "end": 16904658}, {"filename": "/rgfw_example.c", "start": 16904658, "end": 16916528}], "remote_package_size": 16916528});
+    loadPackage({"files": [{"filename": "/.git/FETCH_HEAD", "start": 0, "end": 136}, {"filename": "/.git/HEAD", "start": 136, "end": 157}, {"filename": "/.git/config", "start": 157, "end": 582}, {"filename": "/.git/description", "start": 582, "end": 655}, {"filename": "/.git/hooks/applypatch-msg.sample", "start": 655, "end": 1133}, {"filename": "/.git/hooks/commit-msg.sample", "start": 1133, "end": 2029}, {"filename": "/.git/hooks/fsmonitor-watchman.sample", "start": 2029, "end": 6755}, {"filename": "/.git/hooks/post-update.sample", "start": 6755, "end": 6944}, {"filename": "/.git/hooks/pre-applypatch.sample", "start": 6944, "end": 7368}, {"filename": "/.git/hooks/pre-commit.sample", "start": 7368, "end": 9017}, {"filename": "/.git/hooks/pre-merge-commit.sample", "start": 9017, "end": 9433}, {"filename": "/.git/hooks/pre-push.sample", "start": 9433, "end": 10807}, {"filename": "/.git/hooks/pre-rebase.sample", "start": 10807, "end": 15705}, {"filename": "/.git/hooks/pre-receive.sample", "start": 15705, "end": 16249}, {"filename": "/.git/hooks/prepare-commit-msg.sample", "start": 16249, "end": 17741}, {"filename": "/.git/hooks/push-to-checkout.sample", "start": 17741, "end": 20524}, {"filename": "/.git/hooks/sendemail-validate.sample", "start": 20524, "end": 22832}, {"filename": "/.git/hooks/update.sample", "start": 22832, "end": 26482}, {"filename": "/.git/index", "start": 26482, "end": 27894}, {"filename": "/.git/info/exclude", "start": 27894, "end": 28134}, {"filename": "/.git/logs/HEAD", "start": 28134, "end": 28351}, {"filename": "/.git/logs/refs/heads/main", "start": 28351, "end": 28577}, {"filename": "/.git/logs/refs/remotes/origin/main", "start": 28577, "end": 28913}, {"filename": "/.git/objects/07/df4d9a97a1f34d1baf44a8914a932155e2886d", "start": 28913, "end": 29897}, {"filename": "/.git/objects/1a/58f66277d6bc869dfeb701591bd39f25eaacd0", "start": 29897, "end": 1935095}, {"filename": "/.git/objects/33/98c374e7adb36ebfebcbddb360e8d8e6987b45", "start": 1935095, "end": 1935258}, {"filename": "/.git/objects/3b/a62e0733531b5455306524d833eaf3827b6707", "start": 1935258, "end": 1935577}, {"filename": "/.git/objects/4e/f4547aefa30c7f48c2be88c4f1a51382fce816", "start": 1935577, "end": 2290878}, {"filename": "/.git/objects/53/d6bbaf9307c2ed1f5922382e55fd267d6eeae8", "start": 2290878, "end": 2291213}, {"filename": "/.git/objects/60/3df2c5e18d0e5d50da24b23a829907d78560e3", "start": 2291213, "end": 2291264}, {"filename": "/.git/objects/65/2024e13b3742986f8fdfc047202ff62d4cfbf0", "start": 2291264, "end": 2291408}, {"filename": "/.git/objects/94/2a688e0262975daf8af6dda5fc81f57c78fb97", "start": 2291408, "end": 3088446}, {"filename": "/.git/objects/a5/fbb79337d2cf393675e1e1984eb6ca7e6df55b", "start": 3088446, "end": 3088657}, {"filename": "/.git/objects/ad/d5b587422b9939a3ee4dde2d3de4287fdb0b00", "start": 3088657, "end": 3088808}, {"filename": "/.git/objects/b8/a6300c0e26545a3c4fd2f6ae6bd604f989a0d7", "start": 3088808, "end": 3182616}, {"filename": "/.git/objects/bb/120ebd4912de0c54c23c4d9c32d82dc753441f", "start": 3182616, "end": 3182778}, {"filename": "/.git/objects/d8/d21d926ec0ca1d6466c8feab518a531fb20872", "start": 3182778, "end": 3186357}, {"filename": "/.git/objects/d8/edf9e5250979dda18ed4fb7d11169df14ad1cd", "start": 3186357, "end": 3186461}, {"filename": "/.git/objects/e2/74c08d04d669636eba27aa2eb4d4b6bf93e1bd", "start": 3186461, "end": 3186642}, {"filename": "/.git/objects/f2/e558dc49564f6970abf208a7c174e2707f4f01", "start": 3186642, "end": 3186791}, {"filename": "/.git/objects/f5/0333a44314b4e1bb99a0273fab045e7a91d60c", "start": 3186791, "end": 3283810}, {"filename": "/.git/objects/fb/62f53800cdf591d20fb814ef1a03d0c5504fb4", "start": 3283810, "end": 3284723}, {"filename": "/.git/objects/fd/ddb29aa445bf3d6a5d843d6dd77e10a9f99657", "start": 3284723, "end": 3285444}, {"filename": "/.git/refs/heads/main", "start": 3285444, "end": 3285485}, {"filename": "/.git/refs/remotes/origin/main", "start": 3285485, "end": 3285526}, {"filename": "/.git/shallow", "start": 3285526, "end": 3285567}, {"filename": "/.github/workflows/linux.yml", "start": 3285567, "end": 3285948}, {"filename": "/.github/workflows/macos.yml", "start": 3285948, "end": 3286159}, {"filename": "/.github/workflows/web.yml", "start": 3286159, "end": 3286722}, {"filename": "/.github/workflows/windows.yml", "start": 3286722, "end": 3286937}, {"filename": "/LICENSE", "start": 3286937, "end": 3288148}, {"filename": "/Makefile", "start": 3288148, "end": 3290361}, {"filename": "/README.md", "start": 3290361, "end": 3290470}, {"filename": "/doom1.wad", "start": 3290470, "end": 7486490}, {"filename": "/include/PureDOOM.h", "start": 7486490, "end": 8755719}, {"filename": "/include/RGFW.h", "start": 8755719, "end": 9077842}, {"filename": "/include/miniaudio.h", "start": 9077842, "end": 12931856}, {"filename": "/include/stb_image_resize2.h", "start": 12931856, "end": 13373955}, {"filename": "/index.html", "start": 13373955, "end": 13375799}, {"filename": "/libs.c", "start": 13375799, "end": 13376167}, {"filename": "/libs.o", "start": 13376167, "end": 16937223}, {"filename": "/rgfw_example.c", "start": 16937223, "end": 16947945}], "remote_package_size": 16947945});
 
   })();
 
@@ -1214,23 +1213,29 @@ function dbg(text) {
 // === Body ===
 
 var ASM_CONSTS = {
-  226080: () => { Module.canvas.focus(); },  
- 226105: () => { return window.innerWidth; },  
- 226135: () => { return window.innerHeight; },  
- 226166: () => { Module.useWebGL = true; GLImmediate.init(); },  
- 226212: () => { var canvas = document.getElementById('canvas'); canvas.addEventListener('drop', function(e) { e.preventDefault(); if (e.dataTransfer.file < 0) return; var filenamesArray = []; var count = e.dataTransfer.files.length; var drop_dir = '.rgfw_dropped_files'; Module._RGFW_mkdir(drop_dir); for (var i = 0; i < count; i++) { var file = e.dataTransfer.files[i]; var path = '/' + drop_dir + '/' + file.name.replace("//", '_'); var reader = new FileReader(); reader.onloadend = (e) => { if (reader.readyState != 2) { out('failed to read dropped file: '+file.name+': '+reader.error); } else { var data = e.target.result; _RGFW_writeFile(path, new Uint8Array(data), file.size); } }; reader.readAsArrayBuffer(file); var filename = stringToNewUTF8(path); filenamesArray.push(filename); Module._RGFW_makeSetValue(i, filename); } Module._Emscripten_onDrop(count); for (var i = 0; i < count; ++i) { _free(filenamesArray[i]); } }, true); canvas.addEventListener('dragover', function(e) { e.preventDefault(); return false; }, true); },  
- 227231: () => { document.getElementById('canvas').style.cursor = 'none'; },  
- 227288: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
- 227359: () => { if ((window.AudioContext || window.webkitAudioContext) === undefined) { return 0; } if (typeof(window.miniaudio) === 'undefined') { window.miniaudio = {}; miniaudio.devices = []; miniaudio.track_device = function(device) { for (var iDevice = 0; iDevice < miniaudio.devices.length; ++iDevice) { if (miniaudio.devices[iDevice] == null) { miniaudio.devices[iDevice] = device; return iDevice; } } miniaudio.devices.push(device); return miniaudio.devices.length - 1; }; miniaudio.untrack_device_by_index = function(deviceIndex) { miniaudio.devices[deviceIndex] = null; while (miniaudio.devices.length > 0) { if (miniaudio.devices[miniaudio.devices.length-1] == null) { miniaudio.devices.pop(); } else { break; } } }; miniaudio.untrack_device = function(device) { for (var iDevice = 0; iDevice < miniaudio.devices.length; ++iDevice) { if (miniaudio.devices[iDevice] == device) { return miniaudio.untrack_device_by_index(iDevice); } } }; miniaudio.get_device_by_index = function(deviceIndex) { return miniaudio.devices[deviceIndex]; }; miniaudio.unlock_event_types = (function(){ return ['touchstart', 'touchend', 'click']; })(); miniaudio.unlock = function() { for(var i = 0; i < miniaudio.devices.length; ++i) { var device = miniaudio.devices[i]; if (device != null && device.webaudio != null && device.state === 2 ) { device.webaudio.resume(); } } miniaudio.unlock_event_types.map(function(event_type) { document.removeEventListener(event_type, miniaudio.unlock, true); }); }; miniaudio.unlock_event_types.map(function(event_type) { document.addEventListener(event_type, miniaudio.unlock, true); }); } return 1; },  
- 228971: () => { return (navigator.mediaDevices !== undefined && navigator.mediaDevices.getUserMedia !== undefined); },  
- 229075: () => { try { var temp = new (window.AudioContext || window.webkitAudioContext)(); var sampleRate = temp.sampleRate; temp.close(); return sampleRate; } catch(e) { return 0; } },  
- 229246: ($0, $1, $2, $3, $4) => { var channels = $0; var sampleRate = $1; var bufferSize = $2; var isCapture = $3; var pDevice = $4; if (typeof(window.miniaudio) === 'undefined') { return -1; } var device = {}; device.webaudio = new (window.AudioContext || window.webkitAudioContext)({sampleRate:sampleRate}); device.webaudio.suspend(); device.state = 1; device.intermediaryBufferSizeInBytes = channels * bufferSize * 4; device.intermediaryBuffer = Module._malloc(device.intermediaryBufferSizeInBytes); device.intermediaryBufferView = new Float32Array(Module.HEAPF32.buffer, device.intermediaryBuffer, device.intermediaryBufferSizeInBytes); device.scriptNode = device.webaudio.createScriptProcessor(bufferSize, (isCapture) ? channels : 0, (isCapture) ? 0 : channels); if (isCapture) { device.scriptNode.onaudioprocess = function(e) { if (device.intermediaryBuffer === undefined) { return; } if (device.intermediaryBufferView.length == 0) { device.intermediaryBufferView = new Float32Array(Module.HEAPF32.buffer, device.intermediaryBuffer, device.intermediaryBufferSizeInBytes); } for (var iChannel = 0; iChannel < e.outputBuffer.numberOfChannels; ++iChannel) { e.outputBuffer.getChannelData(iChannel).fill(0.0); } var sendSilence = false; if (device.streamNode === undefined) { sendSilence = true; } if (e.inputBuffer.numberOfChannels != channels) { console.log("Capture: Channel count mismatch. " + e.inputBufer.numberOfChannels + " != " + channels + ". Sending silence."); sendSilence = true; } var totalFramesProcessed = 0; while (totalFramesProcessed < e.inputBuffer.length) { var framesRemaining = e.inputBuffer.length - totalFramesProcessed; var framesToProcess = framesRemaining; if (framesToProcess > (device.intermediaryBufferSizeInBytes/channels/4)) { framesToProcess = (device.intermediaryBufferSizeInBytes/channels/4); } if (sendSilence) { device.intermediaryBufferView.fill(0.0); } else { for (var iFrame = 0; iFrame < framesToProcess; ++iFrame) { for (var iChannel = 0; iChannel < e.inputBuffer.numberOfChannels; ++iChannel) { device.intermediaryBufferView[iFrame*channels + iChannel] = e.inputBuffer.getChannelData(iChannel)[totalFramesProcessed + iFrame]; } } } ccall("ma_device_process_pcm_frames_capture__webaudio", "undefined", ["number", "number", "number"], [pDevice, framesToProcess, device.intermediaryBuffer]); totalFramesProcessed += framesToProcess; } }; navigator.mediaDevices.getUserMedia({audio:true, video:false}) .then(function(stream) { device.streamNode = device.webaudio.createMediaStreamSource(stream); device.streamNode.connect(device.scriptNode); device.scriptNode.connect(device.webaudio.destination); }) .catch(function(error) { device.scriptNode.connect(device.webaudio.destination); }); } else { device.scriptNode.onaudioprocess = function(e) { if (device.intermediaryBuffer === undefined) { return; } if(device.intermediaryBufferView.length == 0) { device.intermediaryBufferView = new Float32Array(Module.HEAPF32.buffer, device.intermediaryBuffer, device.intermediaryBufferSizeInBytes); } var outputSilence = false; if (e.outputBuffer.numberOfChannels != channels) { console.log("Playback: Channel count mismatch. " + e.outputBufer.numberOfChannels + " != " + channels + ". Outputting silence."); outputSilence = true; return; } var totalFramesProcessed = 0; while (totalFramesProcessed < e.outputBuffer.length) { var framesRemaining = e.outputBuffer.length - totalFramesProcessed; var framesToProcess = framesRemaining; if (framesToProcess > (device.intermediaryBufferSizeInBytes/channels/4)) { framesToProcess = (device.intermediaryBufferSizeInBytes/channels/4); } ccall("ma_device_process_pcm_frames_playback__webaudio", "undefined", ["number", "number", "number"], [pDevice, framesToProcess, device.intermediaryBuffer]); if (outputSilence) { for (var iChannel = 0; iChannel < e.outputBuffer.numberOfChannels; ++iChannel) { e.outputBuffer.getChannelData(iChannel).fill(0.0); } } else { for (var iChannel = 0; iChannel < e.outputBuffer.numberOfChannels; ++iChannel) { var outputBuffer = e.outputBuffer.getChannelData(iChannel); var intermediaryBuffer = device.intermediaryBufferView; for (var iFrame = 0; iFrame < framesToProcess; ++iFrame) { outputBuffer[totalFramesProcessed + iFrame] = intermediaryBuffer[iFrame*channels + iChannel]; } } } totalFramesProcessed += framesToProcess; } }; device.scriptNode.connect(device.webaudio.destination); } return miniaudio.track_device(device); },  
- 233646: ($0) => { return miniaudio.get_device_by_index($0).webaudio.sampleRate; },  
- 233712: ($0) => { var device = miniaudio.get_device_by_index($0); if (device.scriptNode !== undefined) { device.scriptNode.onaudioprocess = function(e) {}; device.scriptNode.disconnect(); device.scriptNode = undefined; } if (device.streamNode !== undefined) { device.streamNode.disconnect(); device.streamNode = undefined; } device.webaudio.close(); device.webaudio = undefined; if (device.intermediaryBuffer !== undefined) { Module._free(device.intermediaryBuffer); device.intermediaryBuffer = undefined; device.intermediaryBufferView = undefined; device.intermediaryBufferSizeInBytes = undefined; } miniaudio.untrack_device_by_index($0); },  
- 234338: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.resume(); device.state = 2; },  
- 234434: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.resume(); device.state = 2; },  
- 234530: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.suspend(); device.state = 1; },  
- 234627: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.suspend(); device.state = 1; }
+  226640: () => { Module.canvas.focus(); },  
+ 226665: () => { Module.useWebGL = true; GLImmediate.init(); },  
+ 226711: () => { window.addEventListener("keydown", (event) => { Module._RGFW_handleKeyEvent(stringToNewUTF8(event.key), stringToNewUTF8(event.code), 1); }, true, ); },  
+ 226864: () => { window.addEventListener("keyup", (event) => { Module._RGFW_handleKeyEvent(stringToNewUTF8(event.key), stringToNewUTF8(event.code), 0); }, true, ); },  
+ 227015: () => { var canvas = document.getElementById('canvas'); canvas.addEventListener('drop', function(e) { e.preventDefault(); if (e.dataTransfer.file < 0) return; var filenamesArray = []; var count = e.dataTransfer.files.length; var drop_dir = '.rgfw_dropped_files'; Module._RGFW_mkdir(drop_dir); for (var i = 0; i < count; i++) { var file = e.dataTransfer.files[i]; var path = '/' + drop_dir + '/' + file.name.replace("//", '_'); var reader = new FileReader(); reader.onloadend = (e) => { if (reader.readyState != 2) { out('failed to read dropped file: '+file.name+': '+reader.error); } else { var data = e.target.result; _RGFW_writeFile(path, new Uint8Array(data), file.size); } }; reader.readAsArrayBuffer(file); var filename = stringToNewUTF8(path); filenamesArray.push(filename); Module._RGFW_makeSetValue(i, filename); } Module._Emscripten_onDrop(count); for (var i = 0; i < count; ++i) { _free(filenamesArray[i]); } }, true); canvas.addEventListener('dragover', function(e) { e.preventDefault(); return false; }, true); },  
+ 228034: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
+ 228105: () => { document.getElementById('canvas').style.cursor = 'none'; },  
+ 228162: () => { return window.mouseX || 0; },  
+ 228193: () => { return window.mouseY || 0; },  
+ 228224: ($0) => { var canvas = document.getElementById('canvas'); if ($0) { canvas.style.pointerEvents = 'none'; } else { canvas.style.pointerEvents = 'auto'; } },  
+ 228371: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
+ 228424: () => { return window.innerWidth; },  
+ 228454: () => { return window.innerHeight; },  
+ 228485: () => { if ((window.AudioContext || window.webkitAudioContext) === undefined) { return 0; } if (typeof(window.miniaudio) === 'undefined') { window.miniaudio = {}; miniaudio.devices = []; miniaudio.track_device = function(device) { for (var iDevice = 0; iDevice < miniaudio.devices.length; ++iDevice) { if (miniaudio.devices[iDevice] == null) { miniaudio.devices[iDevice] = device; return iDevice; } } miniaudio.devices.push(device); return miniaudio.devices.length - 1; }; miniaudio.untrack_device_by_index = function(deviceIndex) { miniaudio.devices[deviceIndex] = null; while (miniaudio.devices.length > 0) { if (miniaudio.devices[miniaudio.devices.length-1] == null) { miniaudio.devices.pop(); } else { break; } } }; miniaudio.untrack_device = function(device) { for (var iDevice = 0; iDevice < miniaudio.devices.length; ++iDevice) { if (miniaudio.devices[iDevice] == device) { return miniaudio.untrack_device_by_index(iDevice); } } }; miniaudio.get_device_by_index = function(deviceIndex) { return miniaudio.devices[deviceIndex]; }; miniaudio.unlock_event_types = (function(){ return ['touchstart', 'touchend', 'click']; })(); miniaudio.unlock = function() { for(var i = 0; i < miniaudio.devices.length; ++i) { var device = miniaudio.devices[i]; if (device != null && device.webaudio != null && device.state === 2 ) { device.webaudio.resume(); } } miniaudio.unlock_event_types.map(function(event_type) { document.removeEventListener(event_type, miniaudio.unlock, true); }); }; miniaudio.unlock_event_types.map(function(event_type) { document.addEventListener(event_type, miniaudio.unlock, true); }); } return 1; },  
+ 230097: () => { return (navigator.mediaDevices !== undefined && navigator.mediaDevices.getUserMedia !== undefined); },  
+ 230201: () => { try { var temp = new (window.AudioContext || window.webkitAudioContext)(); var sampleRate = temp.sampleRate; temp.close(); return sampleRate; } catch(e) { return 0; } },  
+ 230372: ($0, $1, $2, $3, $4) => { var channels = $0; var sampleRate = $1; var bufferSize = $2; var isCapture = $3; var pDevice = $4; if (typeof(window.miniaudio) === 'undefined') { return -1; } var device = {}; device.webaudio = new (window.AudioContext || window.webkitAudioContext)({sampleRate:sampleRate}); device.webaudio.suspend(); device.state = 1; device.intermediaryBufferSizeInBytes = channels * bufferSize * 4; device.intermediaryBuffer = Module._malloc(device.intermediaryBufferSizeInBytes); device.intermediaryBufferView = new Float32Array(Module.HEAPF32.buffer, device.intermediaryBuffer, device.intermediaryBufferSizeInBytes); device.scriptNode = device.webaudio.createScriptProcessor(bufferSize, (isCapture) ? channels : 0, (isCapture) ? 0 : channels); if (isCapture) { device.scriptNode.onaudioprocess = function(e) { if (device.intermediaryBuffer === undefined) { return; } if (device.intermediaryBufferView.length == 0) { device.intermediaryBufferView = new Float32Array(Module.HEAPF32.buffer, device.intermediaryBuffer, device.intermediaryBufferSizeInBytes); } for (var iChannel = 0; iChannel < e.outputBuffer.numberOfChannels; ++iChannel) { e.outputBuffer.getChannelData(iChannel).fill(0.0); } var sendSilence = false; if (device.streamNode === undefined) { sendSilence = true; } if (e.inputBuffer.numberOfChannels != channels) { console.log("Capture: Channel count mismatch. " + e.inputBufer.numberOfChannels + " != " + channels + ". Sending silence."); sendSilence = true; } var totalFramesProcessed = 0; while (totalFramesProcessed < e.inputBuffer.length) { var framesRemaining = e.inputBuffer.length - totalFramesProcessed; var framesToProcess = framesRemaining; if (framesToProcess > (device.intermediaryBufferSizeInBytes/channels/4)) { framesToProcess = (device.intermediaryBufferSizeInBytes/channels/4); } if (sendSilence) { device.intermediaryBufferView.fill(0.0); } else { for (var iFrame = 0; iFrame < framesToProcess; ++iFrame) { for (var iChannel = 0; iChannel < e.inputBuffer.numberOfChannels; ++iChannel) { device.intermediaryBufferView[iFrame*channels + iChannel] = e.inputBuffer.getChannelData(iChannel)[totalFramesProcessed + iFrame]; } } } ccall("ma_device_process_pcm_frames_capture__webaudio", "undefined", ["number", "number", "number"], [pDevice, framesToProcess, device.intermediaryBuffer]); totalFramesProcessed += framesToProcess; } }; navigator.mediaDevices.getUserMedia({audio:true, video:false}) .then(function(stream) { device.streamNode = device.webaudio.createMediaStreamSource(stream); device.streamNode.connect(device.scriptNode); device.scriptNode.connect(device.webaudio.destination); }) .catch(function(error) { device.scriptNode.connect(device.webaudio.destination); }); } else { device.scriptNode.onaudioprocess = function(e) { if (device.intermediaryBuffer === undefined) { return; } if(device.intermediaryBufferView.length == 0) { device.intermediaryBufferView = new Float32Array(Module.HEAPF32.buffer, device.intermediaryBuffer, device.intermediaryBufferSizeInBytes); } var outputSilence = false; if (e.outputBuffer.numberOfChannels != channels) { console.log("Playback: Channel count mismatch. " + e.outputBufer.numberOfChannels + " != " + channels + ". Outputting silence."); outputSilence = true; return; } var totalFramesProcessed = 0; while (totalFramesProcessed < e.outputBuffer.length) { var framesRemaining = e.outputBuffer.length - totalFramesProcessed; var framesToProcess = framesRemaining; if (framesToProcess > (device.intermediaryBufferSizeInBytes/channels/4)) { framesToProcess = (device.intermediaryBufferSizeInBytes/channels/4); } ccall("ma_device_process_pcm_frames_playback__webaudio", "undefined", ["number", "number", "number"], [pDevice, framesToProcess, device.intermediaryBuffer]); if (outputSilence) { for (var iChannel = 0; iChannel < e.outputBuffer.numberOfChannels; ++iChannel) { e.outputBuffer.getChannelData(iChannel).fill(0.0); } } else { for (var iChannel = 0; iChannel < e.outputBuffer.numberOfChannels; ++iChannel) { var outputBuffer = e.outputBuffer.getChannelData(iChannel); var intermediaryBuffer = device.intermediaryBufferView; for (var iFrame = 0; iFrame < framesToProcess; ++iFrame) { outputBuffer[totalFramesProcessed + iFrame] = intermediaryBuffer[iFrame*channels + iChannel]; } } } totalFramesProcessed += framesToProcess; } }; device.scriptNode.connect(device.webaudio.destination); } return miniaudio.track_device(device); },  
+ 234772: ($0) => { return miniaudio.get_device_by_index($0).webaudio.sampleRate; },  
+ 234838: ($0) => { var device = miniaudio.get_device_by_index($0); if (device.scriptNode !== undefined) { device.scriptNode.onaudioprocess = function(e) {}; device.scriptNode.disconnect(); device.scriptNode = undefined; } if (device.streamNode !== undefined) { device.streamNode.disconnect(); device.streamNode = undefined; } device.webaudio.close(); device.webaudio = undefined; if (device.intermediaryBuffer !== undefined) { Module._free(device.intermediaryBuffer); device.intermediaryBuffer = undefined; device.intermediaryBufferView = undefined; device.intermediaryBufferSizeInBytes = undefined; } miniaudio.untrack_device_by_index($0); },  
+ 235464: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.resume(); device.state = 2; },  
+ 235560: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.resume(); device.state = 2; },  
+ 235656: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.suspend(); device.state = 1; },  
+ 235753: ($0) => { var device = miniaudio.get_device_by_index($0); device.webaudio.suspend(); device.state = 1; }
 };
 
 
@@ -5059,52 +5064,6 @@ var ASM_CONSTS = {
       if (_emscripten_sample_gamepad_data()) return -1;
       return registerGamepadEventCallback(2, userData, useCapture, callbackfunc, 27, "gamepaddisconnected", targetThread);
     };
-
-  
-  
-  
-  var registerKeyEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
-      if (!JSEvents.keyEvent) JSEvents.keyEvent = _malloc(176);
-  
-      var keyEventHandlerFunc = (e) => {
-        assert(e);
-  
-        var keyEventData = JSEvents.keyEvent;
-        HEAPF64[((keyEventData)>>3)] = e.timeStamp;
-  
-        var idx =((keyEventData)>>2);
-  
-        HEAP32[idx + 2] = e.location;
-        HEAP32[idx + 3] = e.ctrlKey;
-        HEAP32[idx + 4] = e.shiftKey;
-        HEAP32[idx + 5] = e.altKey;
-        HEAP32[idx + 6] = e.metaKey;
-        HEAP32[idx + 7] = e.repeat;
-        HEAP32[idx + 8] = e.charCode;
-        HEAP32[idx + 9] = e.keyCode;
-        HEAP32[idx + 10] = e.which;
-        stringToUTF8(e.key || '', keyEventData + 44, 32);
-        stringToUTF8(e.code || '', keyEventData + 76, 32);
-        stringToUTF8(e.char || '', keyEventData + 108, 32);
-        stringToUTF8(e.locale || '', keyEventData + 140, 32);
-  
-        if (((a1, a2, a3) => dynCall_iiii.apply(null, [callbackfunc, a1, a2, a3]))(eventTypeId, keyEventData, userData)) e.preventDefault();
-      };
-  
-      var eventHandler = {
-        target: findEventTarget(target),
-        eventTypeString,
-        callbackfunc,
-        handlerFunc: keyEventHandlerFunc,
-        useCapture
-      };
-      return JSEvents.registerOrRemoveHandler(eventHandler);
-    };
-  var _emscripten_set_keydown_callback_on_thread = (target, userData, useCapture, callbackfunc, targetThread) =>
-      registerKeyEventCallback(target, userData, useCapture, callbackfunc, 2, "keydown", targetThread);
-
-  var _emscripten_set_keyup_callback_on_thread = (target, userData, useCapture, callbackfunc, targetThread) =>
-      registerKeyEventCallback(target, userData, useCapture, callbackfunc, 3, "keyup", targetThread);
 
   
   
@@ -12464,10 +12423,6 @@ var wasmImports = {
   /** @export */
   emscripten_set_gamepaddisconnected_callback_on_thread: _emscripten_set_gamepaddisconnected_callback_on_thread,
   /** @export */
-  emscripten_set_keydown_callback_on_thread: _emscripten_set_keydown_callback_on_thread,
-  /** @export */
-  emscripten_set_keyup_callback_on_thread: _emscripten_set_keyup_callback_on_thread,
-  /** @export */
   emscripten_set_mousedown_callback_on_thread: _emscripten_set_mousedown_callback_on_thread,
   /** @export */
   emscripten_set_mousemove_callback_on_thread: _emscripten_set_mousemove_callback_on_thread,
@@ -12543,13 +12498,14 @@ var wasmImports = {
 Asyncify.instrumentWasmImports(wasmImports);
 var wasmExports = createWasm();
 var ___wasm_call_ctors = createExportWrapper('__wasm_call_ctors');
+var _malloc = Module['_malloc'] = createExportWrapper('malloc');
+var _free = createExportWrapper('free');
+var _RGFW_handleKeyEvent = Module['_RGFW_handleKeyEvent'] = createExportWrapper('RGFW_handleKeyEvent');
 var _Emscripten_onDrop = Module['_Emscripten_onDrop'] = createExportWrapper('Emscripten_onDrop');
 var _RGFW_makeSetValue = Module['_RGFW_makeSetValue'] = createExportWrapper('RGFW_makeSetValue');
 var _RGFW_mkdir = Module['_RGFW_mkdir'] = createExportWrapper('RGFW_mkdir');
 var _RGFW_writeFile = Module['_RGFW_writeFile'] = createExportWrapper('RGFW_writeFile');
 var _main = Module['_main'] = createExportWrapper('__main_argc_argv');
-var _free = createExportWrapper('free');
-var _malloc = Module['_malloc'] = createExportWrapper('malloc');
 var _ma_device_process_pcm_frames_capture__webaudio = Module['_ma_device_process_pcm_frames_capture__webaudio'] = createExportWrapper('ma_device_process_pcm_frames_capture__webaudio');
 var _ma_device_process_pcm_frames_playback__webaudio = Module['_ma_device_process_pcm_frames_playback__webaudio'] = createExportWrapper('ma_device_process_pcm_frames_playback__webaudio');
 var _fflush = createExportWrapper('fflush');
@@ -12561,13 +12517,14 @@ var stackSave = createExportWrapper('stackSave');
 var stackRestore = createExportWrapper('stackRestore');
 var stackAlloc = createExportWrapper('stackAlloc');
 var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports['emscripten_stack_get_current'])();
+var dynCall_iiii = Module['dynCall_iiii'] = createExportWrapper('dynCall_iiii');
 var dynCall_viiii = Module['dynCall_viiii'] = createExportWrapper('dynCall_viiii');
 var dynCall_ii = Module['dynCall_ii'] = createExportWrapper('dynCall_ii');
-var dynCall_iiii = Module['dynCall_iiii'] = createExportWrapper('dynCall_iiii');
 var dynCall_vii = Module['dynCall_vii'] = createExportWrapper('dynCall_vii');
 var dynCall_viii = Module['dynCall_viii'] = createExportWrapper('dynCall_viii');
-var dynCall_viiiii = Module['dynCall_viiiii'] = createExportWrapper('dynCall_viiiii');
+var dynCall_viiiiii = Module['dynCall_viiiiii'] = createExportWrapper('dynCall_viiiiii');
 var dynCall_viidi = Module['dynCall_viidi'] = createExportWrapper('dynCall_viidi');
+var dynCall_viiiii = Module['dynCall_viiiii'] = createExportWrapper('dynCall_viiiii');
 var dynCall_iii = Module['dynCall_iii'] = createExportWrapper('dynCall_iii');
 var dynCall_iiiii = Module['dynCall_iiiii'] = createExportWrapper('dynCall_iiiii');
 var dynCall_vi = Module['dynCall_vi'] = createExportWrapper('dynCall_vi');
@@ -12577,7 +12534,6 @@ var dynCall_jii = Module['dynCall_jii'] = createExportWrapper('dynCall_jii');
 var dynCall_iiiji = Module['dynCall_iiiji'] = createExportWrapper('dynCall_iiiji');
 var dynCall_fffi = Module['dynCall_fffi'] = createExportWrapper('dynCall_fffi');
 var dynCall_ffi = Module['dynCall_ffi'] = createExportWrapper('dynCall_ffi');
-var dynCall_viiiiii = Module['dynCall_viiiiii'] = createExportWrapper('dynCall_viiiiii');
 var dynCall_jiji = Module['dynCall_jiji'] = createExportWrapper('dynCall_jiji');
 var dynCall_iidiiii = Module['dynCall_iidiiii'] = createExportWrapper('dynCall_iidiiii');
 var _asyncify_start_unwind = createExportWrapper('asyncify_start_unwind');
@@ -12658,6 +12614,7 @@ var missingLibrarySymbols = [
   'stringToUTF32',
   'lengthBytesUTF32',
   'writeArrayToMemory',
+  'registerKeyEventCallback',
   'fillDeviceOrientationEventData',
   'registerDeviceOrientationEventCallback',
   'fillDeviceMotionEventData',
@@ -12803,7 +12760,6 @@ var unexportedSymbols = [
   'UTF16Decoder',
   'stringToUTF8OnStack',
   'JSEvents',
-  'registerKeyEventCallback',
   'specialHTMLTargets',
   'maybeCStringToJsString',
   'findEventTarget',
