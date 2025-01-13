@@ -36,7 +36,7 @@ ifeq ($(detected_OS),Windows)
 
 endif
 ifeq ($(detected_OS),Darwin)        # Mac OS X
-	LIBS := -lm -framework Foundation -framework AppKit -framework IOKit $(STATIC)  -framework AudioToolbox
+	LIBS := -lm -framework Cocoa -framework IOKit $(STATIC)  -framework AudioToolbox
 	EXT = 
 	WARNINGS = 
 	OS_DIR = /
@@ -80,7 +80,7 @@ ifneq (,$(filter $(CC),emcc))
 	LIBS += --preload-file ./
 endif
 
-LIBS += -I./include libs.o
+LIBS += -I./include libs.o -lm
 
 all: $(SRC) libs.o
 	$(CC) $(SRC)  $(LINK_GL1) $(LIBS) -o rgfw_example$(EXT)
