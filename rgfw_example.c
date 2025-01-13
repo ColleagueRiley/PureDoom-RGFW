@@ -31,17 +31,17 @@
 #define WIDTH 320
 #define HEIGHT 200
 
-doom_key_t RGFWScancode2DOOM[RGFW_final_key] = {
-    [RGFW_Tab] = DOOM_KEY_TAB,
-    [RGFW_Return] = DOOM_KEY_ENTER,
-    [RGFW_Escape] = DOOM_KEY_ESCAPE,
-    [RGFW_Space] = DOOM_KEY_CTRL,
-    [RGFW_Apostrophe] = DOOM_KEY_APOSTROPHE,
-    [RGFW_Multiply] = DOOM_KEY_MULTIPLY,
-    [RGFW_Comma] = DOOM_KEY_COMMA,
-    [RGFW_Minus] = DOOM_KEY_MINUS,
-    [RGFW_Period] = DOOM_KEY_PERIOD,
-    [RGFW_Slash] = DOOM_KEY_SLASH,
+doom_key_t RGFWScancode2DOOM[RGFW_keyLast] = {
+    [RGFW_tab] = DOOM_KEY_TAB,
+    [RGFW_return] = DOOM_KEY_ENTER,
+    [RGFW_escape] = DOOM_KEY_ESCAPE,
+    [RGFW_space] = DOOM_KEY_CTRL,
+    [RGFW_apostrophe] = DOOM_KEY_APOSTROPHE,
+    [RGFW_multiply] = DOOM_KEY_MULTIPLY,
+    [RGFW_comma] = DOOM_KEY_COMMA,
+    [RGFW_minus] = DOOM_KEY_MINUS,
+    [RGFW_period] = DOOM_KEY_PERIOD,
+    [RGFW_slash] = DOOM_KEY_SLASH,
     [RGFW_0] = DOOM_KEY_0,
     [RGFW_1] = DOOM_KEY_1,
     [RGFW_2] = DOOM_KEY_2,
@@ -52,10 +52,10 @@ doom_key_t RGFWScancode2DOOM[RGFW_final_key] = {
     [RGFW_7] = DOOM_KEY_7,
     [RGFW_8] = DOOM_KEY_8,
     [RGFW_9] = DOOM_KEY_9,
-    [RGFW_Semicolon] = DOOM_KEY_SEMICOLON,
-    [RGFW_Equals] = DOOM_KEY_EQUALS,
-    [RGFW_Bracket] = DOOM_KEY_LEFT_BRACKET,
-    [RGFW_CloseBracket] = DOOM_KEY_RIGHT_BRACKET,
+    [RGFW_semicolon] = DOOM_KEY_SEMICOLON,
+    [RGFW_equals] = DOOM_KEY_EQUALS,
+    [RGFW_bracket] = DOOM_KEY_LEFT_BRACKET,
+    [RGFW_closeBracket] = DOOM_KEY_RIGHT_BRACKET,
     [RGFW_a] = DOOM_KEY_A,
     [RGFW_b] = DOOM_KEY_B,
     [RGFW_c] = DOOM_KEY_C,
@@ -82,17 +82,17 @@ doom_key_t RGFWScancode2DOOM[RGFW_final_key] = {
     [RGFW_x] = DOOM_KEY_X,
     [RGFW_y] = DOOM_KEY_Y,
     [RGFW_z] = DOOM_KEY_Z,
-    [RGFW_BackSpace] = DOOM_KEY_BACKSPACE,
-    [RGFW_AltL] = DOOM_KEY_ALT,
-    [RGFW_AltR] = DOOM_KEY_ALT,
-    [RGFW_ControlL] = DOOM_KEY_CTRL,
-    [RGFW_ControlR] = DOOM_KEY_CTRL,
-    [RGFW_Left] = DOOM_KEY_LEFT_ARROW,
-    [RGFW_Up] = DOOM_KEY_UP_ARROW,
-    [RGFW_Right] = DOOM_KEY_RIGHT_ARROW,
-    [RGFW_Down] = DOOM_KEY_DOWN_ARROW,      
-    [RGFW_ShiftL] = DOOM_KEY_SHIFT,
-    [RGFW_ShiftR] = DOOM_KEY_SHIFT,
+    [RGFW_backSpace] = DOOM_KEY_BACKSPACE,
+    [RGFW_altL] = DOOM_KEY_ALT,
+    [RGFW_altR] = DOOM_KEY_ALT,
+    [RGFW_controlL] = DOOM_KEY_CTRL,
+    [RGFW_controlR] = DOOM_KEY_CTRL,
+    [RGFW_left] = DOOM_KEY_LEFT_ARROW,
+    [RGFW_up] = DOOM_KEY_UP_ARROW,
+    [RGFW_right] = DOOM_KEY_RIGHT_ARROW,
+    [RGFW_down] = DOOM_KEY_DOWN_ARROW,      
+    [RGFW_shiftL] = DOOM_KEY_SHIFT,
+    [RGFW_shiftR] = DOOM_KEY_SHIFT,
     [RGFW_F1] = DOOM_KEY_F1,
     [RGFW_F2] = DOOM_KEY_F2,
     [RGFW_F3] = DOOM_KEY_F3,
@@ -108,24 +108,24 @@ doom_key_t RGFWScancode2DOOM[RGFW_final_key] = {
 };
 
 doom_key_t RGFWGamepad2DOOM[20] = {
-    [RGFW_GP_Y] = DOOM_KEY_TAB,
-    [RGFW_GP_SELECT] = DOOM_KEY_ENTER,
-    [RGFW_GP_START] = DOOM_KEY_ESCAPE,
-    [RGFW_GP_X] = DOOM_KEY_CTRL,
-    [RGFW_GP_A] = DOOM_KEY_E,
-    [RGFW_GP_R2] = DOOM_KEY_CTRL,
-    [RGFW_GP_LEFT] = DOOM_KEY_A,
-    [RGFW_GP_RIGHT] = DOOM_KEY_D,
-    [RGFW_GP_UP] = DOOM_KEY_UP_ARROW,
-    [RGFW_GP_DOWN] = DOOM_KEY_DOWN_ARROW,      
-    [RGFW_GP_L3] = DOOM_KEY_SHIFT,
+    [RGFW_gamepadY] = DOOM_KEY_TAB,
+    [RGFW_gamepadSelect] = DOOM_KEY_ENTER,
+    [RGFW_gamepadStart] = DOOM_KEY_ESCAPE,
+    [RGFW_gamepadX] = DOOM_KEY_CTRL,
+    [RGFW_gamepadA] = DOOM_KEY_E,
+    [RGFW_gamepadR2] = DOOM_KEY_CTRL,
+    [RGFW_gamepadLeft] = DOOM_KEY_A,
+    [RGFW_gamepadRight] = DOOM_KEY_D,
+    [RGFW_gamepadUp] = DOOM_KEY_UP_ARROW,
+    [RGFW_gamepadDown] = DOOM_KEY_DOWN_ARROW,      
+    [RGFW_gamepadL3] = DOOM_KEY_SHIFT,
     
-    [RGFW_GP_HOME] = DOOM_KEY_UNKNOWN,
-    [RGFW_GP_B] = DOOM_KEY_UNKNOWN,
-    [RGFW_GP_L2] = DOOM_KEY_UNKNOWN,
-    [RGFW_GP_R3] = DOOM_KEY_UNKNOWN,
-    [RGFW_GP_L1] = DOOM_KEY_UNKNOWN,
-    [RGFW_GP_R1] = DOOM_KEY_UNKNOWN,
+    [RGFW_gamepadHome] = DOOM_KEY_UNKNOWN,
+    [RGFW_gamepadB] = DOOM_KEY_UNKNOWN,
+    [RGFW_gamepadL2] = DOOM_KEY_UNKNOWN,
+    [RGFW_gamepadR3] = DOOM_KEY_UNKNOWN,
+    [RGFW_gamepadL1] = DOOM_KEY_UNKNOWN,
+    [RGFW_gamepadR1] = DOOM_KEY_UNKNOWN,
 };
 
 void gamepad_update(u32 button, u32 press) {
@@ -133,12 +133,12 @@ void gamepad_update(u32 button, u32 press) {
     u32 Dbutton2 = DOOM_KEY_UNKNOWN;
 
     static char weapon = DOOM_KEY_1;
-    if (button == RGFW_GP_R1 && weapon < DOOM_KEY_7) {
+    if (button == RGFW_gamepadR1 && weapon < DOOM_KEY_7) {
         if (press == 0) weapon++;
         press = !press;
         Dbutton2 = weapon;
     }
-    else if (button == RGFW_GP_L1 && weapon > DOOM_KEY_1 && press == 0) {
+    else if (button == RGFW_gamepadL1 && weapon > DOOM_KEY_1 && press == 0) {
         if (press == 0) weapon--;
         press = !press;
         Dbutton2 = weapon;
@@ -245,9 +245,9 @@ void* thread(void* args) {
 
 int main(int argc, char** args) {
 #ifdef __EMSCRIPTEN__
-    RGFW_window* window = RGFW_createWindow("RGFW DOOM", RGFW_RECT(0, 0, 620, 400), RGFW_CENTER | RGFW_ALLOW_DND);  
+    RGFW_window* window = RGFW_createWindow("RGFW DOOM", RGFW_RECT(0, 0, 620, 400), RGFW_windowCenter | RGFW_windowAllowDND);  
 #else
-    RGFW_window* window = RGFW_createWindow("RGFW DOOM", RGFW_RECT(0, 0, 320, 200), RGFW_CENTER);
+    RGFW_window* window = RGFW_createWindow("RGFW DOOM", RGFW_RECT(0, 0, 320, 200), RGFW_windowCenter);
 #endif
 
     RGFW_area screenSize = RGFW_getScreenSize();
@@ -349,7 +349,7 @@ int main(int argc, char** args) {
 					 * I don't know a better way to do this without it causing
 					 * bugs or having to modify PureDOOM
 					*/
-					if (window->event.key == RGFW_End || (window->event.key == RGFW_ShiftL && RGFW_isPressed(window, RGFW_Escape)))
+					if (window->event.key == RGFW_end || (window->event.key == RGFW_shiftL && RGFW_isPressed(window, RGFW_escape)))
                     {
 						RGFW_window_showMouse(window, active_mouse);
                         if (active_mouse)
@@ -381,13 +381,13 @@ int main(int argc, char** args) {
 						doom_mouse_move(window->event.point.x * 10, 0);
 					}
                     break;
-                case RGFW_gpButtonPressed:
+                case RGFW_gamepadButtonPressed:
                     gamepad_update(window->event.button, 1);
                     break;
-                case RGFW_gpButtonReleased:
+                case RGFW_gamepadButtonReleased:
                     gamepad_update(window->event.button, 0);
                     break;
-                case RGFW_gpAxisMove:
+                case RGFW_gamepadAxisMove:
                     // axis 12
                     switch (window->event.whichAxis) {
                         case 0:
