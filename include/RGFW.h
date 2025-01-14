@@ -9460,7 +9460,7 @@ RGFW_window* RGFW_createWindowPtr(const char* name, RGFW_rect rect, RGFW_windowF
 
 
 	EM_ASM({
-		window.addEventListener("keydown",
+		window.addEventListener("keyup",
 			(event) => {
 				Module._RGFW_handleKeyMods(event.getModifierState("CapsLock"), event.getModifierState("NumLock"), event.getModifierState("Control"), event.getModifierState("Alt"), event.getModifierState("Shift"), event.getModifierState("Meta"));
 				Module._RGFW_handleKeyEvent(stringToNewUTF8(event.key), stringToNewUTF8(event.code),  0);
