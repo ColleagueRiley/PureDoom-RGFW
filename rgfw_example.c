@@ -250,7 +250,7 @@ int main(int argc, char** args) {
     RGFW_window* window = RGFW_createWindow("RGFW DOOM", RGFW_RECT(0, 0, 320, 200), RGFW_windowCenter);
 #endif
 
-    RGFW_window_initBufferSize(window, (RGFW_area){SCREENWIDTH, SCREENHEIGHT});
+    RGFW_window_initBuffer(window);
     RGFW_area screenSize = RGFW_getScreenSize();
     size_t buffer_stride = screenSize.w * 4;
     size_t doom_stride = WIDTH * 4;
@@ -441,13 +441,10 @@ int main(int argc, char** args) {
 
         doom_update();
 
-        //resize.input_pixels = doom_get_framebuffer(4);
-        const u8* ptr = doom_get_framebuffer(4);
-        memcpy(window->buffer, ptr, SCREENWIDTH * SCREENHEIGHT * 4);
-
-        //resize.output_w = resize.output_subw= window->r.w;
-        ///resize.output_h = resize.output_subh = window->r.h; 
-       // stbir_resize_extended(&resize);
+        resize.input_pixels = doom_get_framebuffer(4);
+        resize.output_w = resize.output_subw= window->r.w;
+        resize.output_h = resize.output_subh = window->r.h; 
+        stbir_resize_extended(&resize);
 
         RGFW_window_swapBuffers(window);
 		fps = RGFW_checkFPS(start, frames, 0);
