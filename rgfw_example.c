@@ -250,6 +250,7 @@ int main(int argc, char** args) {
     RGFW_window* window = RGFW_createWindow("RGFW DOOM", RGFW_RECT(0, 0, 320, 200), RGFW_windowCenter);
 #endif
 
+    RGFW_window_initBufferSize(window, (RGFW_area){SCREENWIDTH, SCREENHEIGHT});
     RGFW_area screenSize = RGFW_getScreenSize();
     size_t buffer_stride = screenSize.w * 4;
     size_t doom_stride = WIDTH * 4;
@@ -335,6 +336,8 @@ int main(int argc, char** args) {
     resize.vertical_filter = STBIR_FILTER_BOX;
 	
 	u32 fps = 0;
+    double start = RGFW_getTime();
+    u32 frames = 0;
 
     i32 j = 0;
     while (!done) {
@@ -438,14 +441,17 @@ int main(int argc, char** args) {
 
         doom_update();
 
-        resize.input_pixels = doom_get_framebuffer(4);
-        
-        resize.output_w = resize.output_subw= window->r.w;
-        resize.output_h = resize.output_subh = window->r.h; 
-        stbir_resize_extended(&resize);
+        //resize.input_pixels = doom_get_framebuffer(4);
+        const u8* ptr = doom_get_framebuffer(4);
+        memcpy(window->buffer, ptr, SCREENWIDTH * SCREENHEIGHT * 4);
+
+        //resize.output_w = resize.output_subw= window->r.w;
+        ///resize.output_h = resize.output_subh = window->r.h; 
+       // stbir_resize_extended(&resize);
 
         RGFW_window_swapBuffers(window);
-		fps = RGFW_window_checkFPS(window, 0);
+		fps = RGFW_checkFPS(start, frames, 0);
+        frames++;
     }
     
 #if defined(WIN32)
