@@ -381,7 +381,7 @@ int main(int argc, char** args) {
                 case RGFW_mousePosChanged:
                     if (active_mouse)
                     {
-						doom_mouse_move(window->event.point.x * 10, 0);
+						doom_mouse_move(window->event.vector.x * 10, 0);
 					}
                     break;
                 case RGFW_gamepadButtonPressed:
