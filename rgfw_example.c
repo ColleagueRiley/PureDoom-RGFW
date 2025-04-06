@@ -7,6 +7,9 @@
 
 #define RGFW_IMPLEMENTATION
 
+#if defined(__linux__)
+    #define _INPUT_EVENT_CODES_H
+#endif
 #include "RGFW.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -203,6 +206,21 @@ void send_midi_msg(uint32_t midi_msg)
             0);
     }
 }
+#elif defined(__linux__)
+#include <alsa/asoundlib.h>
+static snd_rawmidi_t* midi_out_handle = NULL;
+
+void send_midi_msg(uint32_t midi_msg)
+{
+    if (midi_out_handle)
+    {
+        unsigned char msg[3];
+        msg[0] = midi_msg & 0xFF;
+        msg[1] = (midi_msg >> 8) & 0xFF;
+        msg[2] = (midi_msg >> 16) & 0xFF;
+        snd_rawmidi_write(midi_out_handle, msg, 3);
+    }
+}
 #else
 void send_midi_msg(uint32_t midi_msg) {}
 #endif
@@ -290,12 +308,12 @@ int main(int argc, char** args) {
     // Setup resolution
     doom_set_resolution(WIDTH, HEIGHT);
 
-    #ifdef RGFW_WINDOWS
+#ifdef RGFW_WINDOWS
     // Setup MIDI for songs
     if (midiOutGetNumDevs() != 0)
         midiOutOpen(&midi_out_handle, 0, 0, 0, 0);
 
-    #elif defined(__APPLE__)
+#elif defined(__APPLE__)
 	AUGraph graph;
 	AUNode outputNode, mixerNode, dlsNode;
 	NewAUGraph(&graph);
@@ -312,7 +330,11 @@ int main(int argc, char** args) {
 	AUGraphConnectNodeInput(graph,mixerNode,0,outputNode,0);
 	AUGraphConnectNodeInput(graph,dlsNode,0,mixerNode,0);
 	AUGraphUpdate(graph,NULL);
-    #endif
+#elif defined(__linux__)
+    snd_rawmidi_open(NULL, &midi_out_handle, "virtual", 0);
+    if (midi_out_handle == NULL)
+        printf("failed to get linux midi handle\n");
+#endif
 
     // Initialize doom
     doom_init(argc, args, DOOM_FLAG_MENU_DARKEN_BG);
@@ -453,9 +475,12 @@ int main(int argc, char** args) {
     
 #if defined(WIN32)
     if (midi_out_handle) midiOutClose(midi_out_handle);
+#elif defined(__linux__)
+    snd_rawmidi_close(midi_out_handle);
 #endif
 
     ma_device_uninit(&device);
     RGFW_window_close(window);
     return 0;
 }
+
