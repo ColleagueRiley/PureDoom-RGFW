@@ -42,7 +42,7 @@ ifeq ($(detected_OS),Darwin)        # Mac OS X
 	OS_DIR = /
 endif
 ifeq ($(detected_OS),Linux)
-    LIBS := -lXrandr -lX11 -lm -ldl -lpthread $(STATIC)
+    LIBS := -lXrandr -lX11 -lm -ldl -lpthread -lasound $(STATIC)
 	EXT =
 	OS_DIR = /
 endif
