@@ -1,5 +1,7 @@
 CC = gcc
 
+CFLAGS = -std=c99
+
 LIBS :=-lgdi32 -lm -lwinmm -ggdb 
 EXT = .exe
 STATIC =
@@ -83,16 +85,16 @@ endif
 LIBS += -I./include libs.o -lm
 
 all: $(SRC) libs.o
-	$(CC) $(SRC)  $(LINK_GL1) $(LIBS) -o rgfw_example$(EXT)
+	$(CC) $(CFLAGS) $(SRC)  $(LINK_GL1) $(LIBS) -o rgfw_example$(EXT)
 
 libs.o: libs.o
-	$(CC) libs.c -c -I./include 
+	$(CC) $(CFLAGS) libs.c -c -I./include 
 
 clean:
 	rm -f *.exe rgfw_example *.o 
 
 debug: $(SRC) libs.o
-	$(CC) $(SRC) $(LINK_GL1) $(LIBS) -D RGFW_DEBUG -o rgfw_example$(EXT) 
+	$(CC) $(CFLAGS) $(SRC) $(LINK_GL1) $(LIBS) -D RGFW_DEBUG -o rgfw_example$(EXT) 
 ifeq (,$(filter $(CC),emcc))
 	.$(OS_DIR)rgfw_example$(EXT)
 endif
