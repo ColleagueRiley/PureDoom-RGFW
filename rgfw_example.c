@@ -207,6 +207,7 @@ void send_midi_msg(uint32_t midi_msg)
     }
 }
 #elif defined(__linux__)
+#define _POSIX_C_SOURCE
 #include <alsa/asoundlib.h>
 static snd_rawmidi_t* midi_out_handle = NULL;
 
